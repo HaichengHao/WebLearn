@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>myfirst_page</title>
+<head> <!--head标签中可以指定网页的标题以及使用的字符集和css样式，其内容不会出现在网页中-->
+    <meta charset="UTF-8"> <!--meta标签用来指定字符集-->
+    <title>myfirst_page</title> <!--title标签用来指定页面的名称-->
 </head>
+<body bgcolor="purple">  <!--其中bgcolor是标签属性-->
 <div>
-    <marquee>哈哈哈hehehe</marquee>
+    <marquee loop = "1" bgcolor = "orange">哈哈哈hehehe</marquee>
+    <input disabled> <!--有些特殊的属性，没有属性名只有属性值-->
 </div>
-<body>
-
 </body>
 </html>
+<!-- 不同的标签有不同的属性；也有一些通用的属性
+2.属性名和属性值不能乱写，都是W3C规定好的。
+3. 属性名、属性值，都不区分大小写，但推荐小写。
+4. 双引号，也可以写成单引号，甚至不写都行，但还是推荐写双引号。
+5. 标签中不要出现同名属性，否则后写的会失效，例如：
+<input type = "text" type = "password"> -->
