@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./mypage.ico">
+    <title>html语义化标签</title>
+    <style>
+        h1{
+            font-size: 30px;
+            color: green;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          
+        }
+        div{
+            background-color: bisque;
+            /* color: blueviolet; */
+            font-size: 15px;
+            transform: rotate(-45deg);
+        } 
+        body>div>p{
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>把个人信息"安全堤"筑牢</h1>
+    <div>
+        <p>2022-6-24</p>
+        <p>置身移动时代，人们在享受信息技术的同时也会遇到信息安全的问题</p>
+        <P>问题不容小看</P>
+    </div>
+</body>
+</html>
+
+<!--默认标签的效果不重要，语义最重要，因为对于标签呈现的效果可以交给css来处理-->
+
+<!--语义化的好处
+    1.可读性提高，便于理解
+    2.有利于SEO(Search Engine Optimization 搜索引擎优化)-->

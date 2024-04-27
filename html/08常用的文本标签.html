@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./mypage.ico">
+    <title>常用的文本标签</title>
+    <style>
+        span{
+            color:red;
+        }
+        code{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        我是<em>em</em>标签；
+    </p> <!--em标签用于强调，展示出的是斜体字-->
+    <p>
+        <strong>哈哈</strong>
+    </p> <!--strong标签用于加粗-->
+    <p>    
+        前端三个框架<span>Angular、React、Vue</span> <!--span没有语义，就是一个用于包裹短语的通用容器-->
+    </p>
+    <p>耗子尾汁<del>199</del>只要<ins>99</ins></p>
+    <p>H<sub>2</sub>O</p>
+    <p>一公顷=10000m<sup>2</sup></p>
+    <code>
+        print("hello html")
+    </code>
+    <p>
+        支付宝到账<samp>100万元</samp>
+    </p>
+    <p>
+        windows保存的快捷键
+        <kbd>
+            ctrl+S
+    </kbd>
+    </p>
+    <p>
+        <abbr title="Hyper Text Mark up Language 超文本标记语言">html</abbr> <!--缩写，title会提示缩写代表的含义-->
+    </p>
+    <p>
+        你是年少的欢喜，反过来就是:<bdo dir="rtl">你是年少的欢喜</bdo> <!--bdo双向文本覆盖元素，其中指定方向的有一个dir属性，ltr即为left to right rtl即为right to left-->
+    </p>
+    <p>
+        等学到了js,我们就知道要这样定义变量了:<code>let <var>a</var>=1</code>
+    </p>
+    <p>
+        <small>本网站仅供参考</small> <!--small标签表示就是一个小声明-->
+    </p>
+    <p><b>锤子手机</b>的操作系统非常好用</p>
+    <p>猪头声嘶力竭地喊着<i>"燕子，没你我怎么活啊燕子"</i></p>
+    <P>张三把"hello world"写成了<u>hello word</u></P>
+    <p>子曾经曰过<q>有朋自远方来，不亦乐乎</q></p>
+    <P>子曾经还曰过<blockquote>箪食瓢饮，回不改其乐</blockquote></P> <!--独占一行的块引用-->
+    <p>地址<address>几内亚</address></p> <!--块元素-->
+</body>
+
+
+
+</html>
