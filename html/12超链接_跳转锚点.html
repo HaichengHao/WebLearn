@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超链接跳转锚点</title>
+    <link rel="icon" href="./mypage.ico">
+    <style>
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#ks">看树</a> <a href="#kg">看狗</a> <a href="#katm">看奥特曼</a><br>
+
+    <a name="ks"></a>
+    <p>我是一棵树，参天大树</p>
+    <img src="../others/spring.jpg" alt="一棵树" title="一棵树">
+    <br>
+    <a name="kg"></a>
+    <p>你是一条单身的汪汪</p>
+    <img src="https://img.keaitupian.cn/newupload/05/1683713511215164.jpg" title="单身无罪">
+    <!--另一种写法 -用id-->
+    <p id="katm">我是贝利亚的细胞</p>
+    <img src="https://ts1.cn.mm.bing.net/th/id/R-C.19c4341df3dab739054ece1772668618?rik=nGIXJrQzxwKA2Q&riu=http%3a%2f%2fcdn.sdk.caohua.com%2fwww%2fzhuanqu%2f15260284940253.jpg&ehk=FTMXNLh7I4P5Rnxeo2SbMMzDPSSQewDLatZqbQR1Y5s%3d&risl=&pid=ImgRaw&r=0">
+    <br>
+    <a href="#">
+        <img src="./mypage.ico" title="回到顶部"> <!--真正的完成回到顶部的功能-->
+    </a><br>
+    <!--也可以调到指定文件下查看锚点对应的信息-->
+    <a href="./09html图像标签.html#kg">看狗</a>
+    <a href="">
+        <img src="./mypage.ico" title="回到顶部"> <!--能完成回到顶部的功能，但其实是刷新页面-->
+    </a>
+</body>
+
+
+</html>

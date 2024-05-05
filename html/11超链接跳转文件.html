@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./mypage.ico">
+    <style>
+        a{
+            color:rebeccapurple;
+        }
+    </style>
+    <title>超链接跳转文件</title>
+    <style>
+        a{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="../css/" target="_blank" title="点我打开">点我跳转到根目录的css文件夹下</a>
+    <a href="./09html图像标签.html" title="第九节">点我去第九节的页面</a>
+    <!--浏览器不能直接打开压缩包等的文件，会触发下载-->
+    <!--浏览器也可以强制触发可以打开的文件类型进行下载,只需加上downlowd属性,可以指定值，则指定的值将作为下载的文件名-->
+    <a href="../others/spring.jpg" title="示例图片" target="_blank" download="一棵树">图片</a>
+</body>
+</html>
