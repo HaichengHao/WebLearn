@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./mypage.ico">
+    <title>跨行与跨列</title>
+    <style>
+        thead{
+            text-align: center;
+            font-size: 20px;
+            color: brown;
+            background-color: antiquewhite;
+        }
+        tbody{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" cellspacing="0">
+        <caption>课程表</caption>
+        <thead>
+            <td>项目</td>
+            <td colspan="5">上课</td>
+            <td colspan="2">活动与休息</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>星期</td>
+                <td>星期1</td>
+                <td>星期2</td>
+                <td>星期3</td>
+                <td>星期4</td>
+                <td>星期5</td>
+                <td>星期6</td>
+                <td>星期日</td>
+            </tr>
+            <tr>
+                <td rowspan="4">上午</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>英语</td>
+                <td>物理</td>
+                <td>数学竞赛</td>
+                <td rowspan="4">休息</td>
+            </tr>
+            <tr>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>英语</td>
+                <td>物理</td>
+                <td>数学竞赛</td>
+            </tr>
+            <tr> <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>英语</td>
+                <td>物理</td>
+                <td>数学竞赛</td></tr>
+            <tr> <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>英语</td>
+                <td>物理</td>
+                <td>数学竞赛</td></tr>
+            <tr><td rowspan="2">下午</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>英语</td>
+                <td>物理</td>
+                <td>英语角</td>
+                <td rowspan="2">休息</td></tr>
+            <tr>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>英语</td>
+                <td>体育</td>
+                <td>自由活动</td>
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+        
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./mypage.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格常用属性</title>
+    <style>
+        td{
+            text-align: center;
+            vertical-align: middle;
+        } #如果不指定，则默认为垂直居中，还有注意点，垂直居中不是center而是middle在css语句的行注释是和python比较像的sharp注释法
+        
+        caption{
+            font-size: 50px;
+            color: red;
+            /* font-weight: 100; */
+        }
+        thead{
+            font-size: 20px;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <table border="1px" width="500" height="100px" cellspacing="0px"> <!--border指定的是表格的边框-->
+        <!--注意，height只会影响tbody，不会影响表头和脚注,即如果指定了表头和脚注的高度，而height并没完全使用完毕，那么会补全给tbody-->
+        <!--cellspacing可以设定单元格之间的边距，注意与跨行跨列区分，指定单元格的边距为0表示单元格边框紧紧贴在一起-->
+        <!--表格标题caption-->
+       <caption>学生信息</caption> <!--注意caption是不可以写属性的，但是可以指定css-->
+       <!--表格头部thead-->
+       <thead height="100"> <!--只有height可以指定，其余指定无效，还是需要利用css来定义样式-->
+        <tr>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+            <td>民族</td>
+            <td>政治面貌</td>
+        </tr>
+    </thead>
+       <!--表格主体tbody-->
+       <tbody>
+        
+        <tr>
+            <td>张三</td>
+            <td>男</td>
+            <td>18</td>
+            <td>汉族</td>
+            <td>团员</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>女</td>
+            <td>20</td>
+            <td>满族</td>
+            <td>群众</td>
+        </tr>
+        <tr>
+            <td colspan="5">共2人</td>
+        </tr>
+       </tbody>
+       <!--脚注tfoot-->
+    <tfoot>
+        <tr>
+        <td colspan="5">脚注</td>
+    </tr>
+    </tfoot>
+        
+    </table>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./mypage.ico">
+    <title>表格基本结构</title>
+    <style>
+        
+        tr{
+            text-align: center;
+            color: blueviolet;
+        }
+        
+    </style>
+</head>
+<body>
+    <table border="1px">
+        <!--表格标题caption-->
+       <caption>学生信息</caption>
+       <!--表格头部thead-->
+       <thead>
+        <tr>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+            <td>民族</td>
+            <td>政治面貌</td>
+        </tr>
+    </thead>
+       <!--表格主体tbody-->
+       <tbody>
+        
+        <tr>
+            <td>张三</td>
+            <td>男</td>
+            <td>18</td>
+            <td>汉族</td>
+            <td>团员</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>女</td>
+            <td>20</td>
+            <td>满族</td>
+            <td>群众</td>
+        </tr>
+        <tr>
+            <td colspan="5">共2人</td>
+        </tr>
+       </tbody>
+       <!--脚注tfoot-->
+    <tfoot>
+        <tr>
+        <td colspan="5">脚注</td>
+    </tr>
+    </tfoot>
+        
+    </table>
+</body>
+</html>
