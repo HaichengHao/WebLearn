@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./mypage.ico">
+    <title>label标签</title>
+</head>
+<body>
+    <form action="https://search.jd.com/Search" method="">
+        <!--实现点击文字会聚焦到输入框中的效果，for用于关联标签与输入框，一般for的值是输入框的id-->
+        <label for="zhanghu">账户: </label> 
+        <input type="text" name="account" id="zhanghu"> <br> <!--value是框中的默认值-->
+        <label for="mima">密码:</label> 
+        <input type="password"  maxlength="16" id="mima"><br> <!--maxlength代表的是最大长度-->
+        性别: <label><input type="radio" name="gender" value="male">男</label> <label><input type="radio" name="gender" value="female">女 </label><br> <!--radio表示显示的是圆点单选框-->
+        <!--checked属性代表的是选项框中的默认选项-->
+
+        <!--关于lable也可以直接把要绑定的文字和输入框包起来，这样就可以不用指定id和for-->
+        <label>
+            用户名:<input type="text" name="username">
+        </label> <br>
+        爱好:<label><input type="checkbox" name="hobby" checked>抽烟</label> 
+        <label><input type="checkbox" name="hobby">喝酒</label>
+        <label></label><input type="checkbox" name="hobby">烫头<br> <!--checkbox代表的是复选框-->
+        <!--隐藏域-->
+        <input type="hidden" name="tag" value="123">
+        <label for="qita">其它: </label>
+        <textarea name="other" cols="10" rows="15" id="qita"></textarea><br>  <!--其中的cols指定的是文本框的列数，rows指定的是文本框的行数-->
+       <!--下拉框为select,其中的选项为option-->
+       <!--有类似于单选和复选框似的预选择属性，但是不是checked而是selected即已被选择-->
+        籍贯: <select name="place">
+            <option value="冀">北京</option>
+            <option value="黑">哈尔滨</option>
+            <option value="吉" selected>长春</option>
+            <option value="辽">沈阳</option>
+            <option value="津">天津</option>
+        </select>
+        <br>
+        <!--写法1-->
+        <!--button的type如果不指定，那么会默认其为submit-->
+        <!-- <button type="submit">确认</button><button type="reset">重置</button><button type="">检测用户是否被注册</button> -->
+        <!--写法2-->
+        <input type="submit" value="确认"> <input type="reset" value="重置">
+        <!--两种写法都不要加name属性-->
+
+        <!--普通按钮-->
+        <!--注意，如果普通账户不写type,则会默认其为submit,如果要指定为普通按钮，则指定其type为button-->
+        <button type="button">检查账户是否被注册</button>
+     </form>
+</body>
+</html>

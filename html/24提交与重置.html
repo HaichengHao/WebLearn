@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./mypage.ico">
+    <title>确认与重置</title>
+</head>
+<body>
+    <form action="https://search.jd.com/Search" method="">
+        账户: <input type="text" name="account" value="手机号/邮箱号"> <br> <!--value是框中的默认值-->
+        密码: <input type="password"  maxlength="16"><br> <!--maxlength代表的是最大长度-->
+        性别: <input type="radio" name="gender" value="male" checked>男 <input type="radio" name="gender" value="female">女 <br> <!--radio表示显示的是圆点单选框-->
+        <!--checked属性代表的是选项框中的默认选项-->
+        爱好: <input type="checkbox" name="hobby" checked>抽烟
+        <input type="checkbox" name="hobby">喝酒
+        <input type="checkbox" name="hobby">烫头<br> <!--checkbox代表的是复选框-->
+        <!--隐藏域-->
+        <input type="hidden" name="tag" value="123">
+        其它: <input type="text"><br> 
+        籍贯: <input type="">
+        <br>
+        <!--写法1-->
+        <!--button的type如果不指定，那么会默认其为submit-->
+        <!-- <button type="submit">确认</button><button type="reset">重置</button><button type="">检测用户是否被注册</button> -->
+        <!--写法2-->
+        <input type="submit" value="确认"> <input type="reset" value="重置">
+        <!--两种写法都不要加name属性-->
+     </form>
+</body>
+</html>

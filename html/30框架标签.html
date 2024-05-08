@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>框架标签</title>
+    <link rel="icon" href="./mypage.ico">
+    <style>
+        iframe{
+            width: 1000px;
+            height: 1500px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 内联框架 -->
+    <!-- <iframe src="https://bilibili.com/" freameborder="0"></iframe> -->
+    <a href="https://www.bing.com" target="biying">必应一下</a>
+    <iframe name="biying" frameborder="0" width="900" height="300"></iframe>
+    <!--与表单配合使用-->
+    <form action="https://so.toutiao.com/search" target="container">
+        <input type="text" name="keyword">
+        <button type="submit">搜索</button>
+        <input type="reset">
+    </form>
+    <iframe name="container"></iframe>
+</body>
+</html>

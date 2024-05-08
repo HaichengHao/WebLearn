@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./mypage.ico">
+    <title>禁用表单控件</title>
+</head>
+<body>
+    <form action="https://search.jd.com/Search" method="">
+        <!--禁用表单控件只需在其中写入disabled即可-->
+        账户: <input type="text" disabled name="account" value="手机号/邮箱号"> <br> <!--value是框中的默认值-->
+        密码: <input type="password"  maxlength="16"><br> <!--maxlength代表的是最大长度-->
+        性别: <input type="radio" name="gender" value="male" checked>男 <input type="radio" name="gender" value="female">女 <br> <!--radio表示显示的是圆点单选框-->
+        <!--checked属性代表的是选项框中的默认选项-->
+        爱好: <input type="checkbox" name="hobby" disabled checked>抽烟
+        <input type="checkbox" name="hobby">喝酒
+        <input type="checkbox" name="hobby">烫头<br> <!--checkbox代表的是复选框-->
+        <!--隐藏域-->
+        <input type="hidden" name="tag" value="123">
+        其它: <textarea disabled name="other" cols="10" rows="15"></textarea><br>  <!--其中的cols指定的是文本框的列数，rows指定的是文本框的行数-->
+       <!--下拉框为select,其中的选项为option-->
+       <!--有类似于单选和复选框似的预选择属性，但是不是checked而是selected即已被选择-->
+        籍贯: <select name="place">
+            <option value="冀" disabled>北京</option>
+            <option value="黑">哈尔滨</option>
+            <option value="吉" selected>长春</option>
+            <option value="辽">沈阳</option>
+            <option value="津">天津</option>
+        </select>
+        <br>
+        <!--写法1-->
+        <!--button的type如果不指定，那么会默认其为submit-->
+        <!-- <button type="submit">确认</button><button type="reset">重置</button><button type="">检测用户是否被注册</button> -->
+        <!--写法2-->
+        <input type="submit" value="确认"> <input type="reset" value="重置">
+        <!--两种写法都不要加name属性-->
+
+        <!--普通按钮-->
+        <!--注意，如果普通账户不写type,则会默认其为submit,如果要指定为普通按钮，则指定其type为button-->
+        <button type="button">检查账户是否被注册</button>
+     </form>
+</body>
+</html>
