@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符实体</title>
+    <link rel="icon" href="./mypage.ico">
+    <style>
+        div {
+            background-color: aquamarine;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>测试 用</p>
+        <p>测试 用</p> <!--多个连续的空格只会识别到第一个-->
+        <p>测试&nbsp;&nbsp;&nbsp;用</p> <!--字符实体&nbsp浏览器会将其识别为空格-->
+        <p>测试&#160;&#160;&#160;&#160;用</p>
+    </div>
+    <div>
+        <p>如果想在文本中写入出现的html元素那么也需要转义，例如&lt;html&gt;</p> <!--lt表示less than gt表示great than-->
+    </div>
+    <div>可以表示空格的字符实体&amp;nbsp;</div> <!--注意,遇到不想让浏览器识别的字符实体，就要利用&amp表示'&'-->
+    <p>衬衫的价格为&yen;199</p>
+    <p>&copy;百年<br>侵权必究</p>
+    <p>2&times;2=4</p>
+</body>
+
+</html>
