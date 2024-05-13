@@ -1,0 +1,6 @@
+/*#region通配选择器*/
+*{
+ color: darkblue;   
+}
+/* 通配选择器可以选择所有的html元素 */
+/*#endregion*/

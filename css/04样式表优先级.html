@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>样式表优先级</title>
+    <link rel="icon" href="../mypage.ico">
+    <link rel="stylesheet" href="./css样式文件/a03外部样式.css">
+</head>
+<style>
+    p{
+        color:rebeccapurple;
+        color: red; /*同一个样式表中的优先级是靠后的优先*/
+    }
+</style>
+<body>
+    <p>什么</p>
+</body>
+</html>
+<!--行内样式的优先级最高，内部样式次之，外部样式再次之
+其实思考一下就可以知道这样的好处-->

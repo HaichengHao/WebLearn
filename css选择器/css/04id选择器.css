@@ -1,0 +1,18 @@
+/* id选择器以 #id名 为规范 */
+/* id不能以数字开头
+    一个html文件中不能出现两个重id的元素
+    一个元素不能指定多个id 
+    一个元素可以同时有id和class*/
+/*#region*/
+#water{
+    color: aqua;
+}
+/*#endregion*/
+
+#bord{
+    color: yellowgreen;
+}
+
+.wei{
+    font-size: 40px;
+}

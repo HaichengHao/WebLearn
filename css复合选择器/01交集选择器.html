@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01交集选择器</title>
+    <style>
+        .boat{
+            color: aqua;
+        }
+        .rocket{
+            color: red;
+        }
+        /* 交集选择器 可以理解为精细选择*/
+        /* 选择p,且类名为rocket的元素 */
+        p.rocket{
+            color: aquamarine;
+        }
+        /* 选择p,且类名为rocket，且id为peipei的元素 */
+        p.rocket#peipei{
+            color: pink;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="boat">飞翔的轮船</h2>
+    <h2 class="rocket">潜水的火箭</h2>
+    <br>
+    <p class="rocket">蛮力蚂蚁</p>
+    <p class="rocket">羸弱北极熊</p>
+    <p class="rocket" id="peipei">小猪佩奇</p>
+</body>
+</html>

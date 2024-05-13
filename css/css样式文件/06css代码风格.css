@@ -1,0 +1,12 @@
+/*#region展开风格*/
+h1{
+    color: aquamarine;
+    font-size: large;
+    font-family:monospace;
+}
+/*#endregion结束*/
+
+/*紧凑风格可以减小文件的体积，产品上线时多使用紧凑风格,可以使网页加载速度更快*/
+/*#region紧凑风格*/
+h2{color:red;font-size: medium;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+/*#endregion*/

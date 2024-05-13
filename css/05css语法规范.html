@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css语法规范</title>
+    <link rel="stylesheet" href="./css样式文件/a05语法规范.css">
+</head>
+<body>
+    <div>
+        <pre>
+            /*#region注h1样式开始*/
+            h1{
+                color:red;
+                font-size:40px
+
+            }
+            /*#endregion注h1样式结束*/
+            其中，h1是选择器，即选中要装饰的内容
+            花括号中的内容叫做声明块
+            声明块中的用分号隔开的元素叫做声明
+            声明是由属性名和属性值的类似于字典的名值对构成的
+            样式表不管是内部还是外部，注释语法同c语言类似，都是/**/
+            补充的注释技巧:
+                利用/*#region注释*/
+                /*#endregion*/可以使被包裹起来的css样式折叠
+        </pre>
+    </div>
+</body>
+</html>

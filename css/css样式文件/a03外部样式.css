@@ -1,0 +1,17 @@
+/*#region标题1开始*/
+h1{
+    color: red;
+}
+/*#endregion*/
+h2{
+    color: rebeccapurple;
+    font-size: large;
+}
+p{
+    color: brown;
+    font-size: 40px;
+}
+img{
+    width: 40px;
+    height: 40px;
+}

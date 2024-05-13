@@ -1,0 +1,13 @@
+/*#region*/
+/* 类选择器以 .类名 为规范 */
+.yhbk{  /*选中yhbk类的元素指定颜色*/
+    color: rebeccapurple;
+}
+/*#endregion*/
+
+.hkhyl{
+    color: aqua;
+}
+.big{
+    font-size: large;
+}
