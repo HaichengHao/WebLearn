@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后代选择器</title>
+    <style>
+        /* 后代选择器，用空格来划分 父类  子类*/
+        /* 表示ul中的li,此为子类选择器的写法 */
+        /* 如果按照类似Python中的nolocal那样向外找到匹配的结果的话
+        那么后代选择器会找到后代中的所有指定的后代，即儿子，孙子，重孙子，···· */
+        ul li{
+            color: rebeccapurple;
+            background-color: aliceblue;
+        }
+        /* 对于后代选择器而言，也可直接省略中间的层级(视情况而定)，
+        例如想让回到顶部的颜色为棕色，可以写为ul li a，也可以直接写为ul a*/
+
+        ul a{
+            color: brown;
+        }
+        /* 找到ol且类名为sd的后代li，将其颜色设置为红色,可以写为ol.sd li 也可以直接写为.sd li*/
+        .sd li{
+            color: red;
+        }
+        ul.sd li{
+            color: aquamarine;
+        }
+        ul.sd #badguy{
+            color: black;
+        }
+        ul.sd li.xl{
+            color: blueviolet;
+        }
+        p h2{
+            color: skyblue;
+        }  /*p标签里边不能嵌套h标签，所以颜色没有发生改变*/
+    </style>
+</head>
+<body>
+    <a href="#zs">找赵四</a>
+    <ul>
+        <li>小猪佩奇</li>
+        <li>小羊苏西</li>
+        <li>小狗丹尼</li>
+        <div>
+            <li>小马宝莉</li> <!--这个也会被后代选择器匹配到-->
+        </div>
+        <li>
+            <a href="#">回到顶部</a>
+        </li>
+    </ul>
+    <hr>
+    <ol>
+        <li>张三</li>
+        <li>李四</li>
+        <li>王五</li>
+        <li>
+            <a name="zs">赵四</a>
+        </li>
+    </ol>
+    <ol class="sd">
+        <li>郭靖</li>
+        <li>黄蓉</li>
+        <li>杨康</li>
+        <li>穆念慈</li>
+    </ol>
+    <ul class="sd">
+        <li class="xl">郭靖</li>
+        <li class="xl">黄蓉</li>
+        <li id="badguy">杨康</li>
+        <li>穆念慈</li>
+    </ul>
+    <p>
+        <h2>你若化成风</h2>
+    </p>
+</body>
+</html>

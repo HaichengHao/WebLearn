@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>并集选择器</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        .boat,.ant,.bear{
+            font-size: 50px;
+            color: aqua;
+            background-color: blueviolet;
+            width: 250px;
+        }
+        .rocket{
+            color: red;
+        }
+        /* 交集选择器 可以理解为精细选择*/
+        /* 选择p,且类名为rocket的元素 */
+        p.rocket{
+            color: aquamarine;
+        }
+        /* 选择p,且类名为rocket，且id为peipei的元素以及id为goat的元素 */
+        p.rocket#peipei,p#goat{
+            color: pink;
+            font-size: 50px;
+            background-color: aquamarine;
+            width: 100px;
+        }
+        /* 现在想让ant和bear类也有boat类的效果，但是不是单纯的复制粘贴，而是利用并集选择器 */
+        /* 并集选择器方式，利用逗号分隔即可，见第九行 */
+        /* .ant{
+            color: bisque;
+
+        } */
+    </style>
 </head>
 <body>
-    
+    <h2 class="boat">飞翔的轮船</h2>
+    <h2>潜水的火箭</h2>
+    <br>
+    <hr>
+    <p class="ant">蛮力蚂蚁</p>
+    <p class="bear">羸弱北极熊</p>
+    <p class="rocket" id="peipei">小猪佩奇</p>
+    <p id="goat">小羊苏西</p>
 </body>
 </html>
+<!-- 并集选择器通常用于集体声明，可以缩小样式表的体积 -->
