@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子代选择器</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        /* 需求，只让div下第一级的a元素颜色为红色 */
+        /* 不能使用后代选择器，因为这样会让其后的任何后代a元素都为红色，所以要用子代选择器 */
+        /* 子代选择器中利用>来表示父子关系 */
+        div>a {
+            color: red;
+        }
+        div>p>a{
+            color: rebeccapurple;
+        }
+        div.foot a{
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <a href="#">张三</a>
+            <a href="#">李四</a>
+            <a href="#">王五</a>
+            <p>
+                <a href="#">赵六</a>
+            <div class="foot">
+                <a href="#">孙七</a>
+            </div>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

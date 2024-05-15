@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兄弟选择器</title>
+    <style>
+        /* 找到div下第一个相邻的p兄弟,将其颜色标记为红色，只会往下看，不会往上看 */
+        /* div+p{
+            color: red;
+        } */
+        /* 找到div下所有的p兄弟，将其颜色标记为紫色,只会往下看，不会往上看 */
+        div~p{
+            color: purple;
+        }
+        /* 找到ul下的后三个li，将其颜色标记为橙色 */
+        li+li{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <p>hcia</p>
+    <div>人工智能</div>
+    <p>前端</p>
+	<p>Java</p>
+	<p>大数据</p>
+	<p>UI</p>
+    <ul>
+        <li>主页</li>
+        <li>秒杀</li>
+        <li>订单</li>
+        <li>我的</li>
+    </ul>
+</body>
+</html>

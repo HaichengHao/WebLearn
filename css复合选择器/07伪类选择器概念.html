@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        /* 没有访问过的链接为橙色 */
+        a:link {
+            color: orange;
+        }
+        /* 被访问过的设置为红色 */
+        a:visited{
+            color: gray;
+        }
+        a:hover{
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.baidu.com" title="百度一下，全是广告">去百度</a>
+    <a href="https://www.jd.com" title="去京东，消费中">去京东</a>
+    <a href="https://www.csdn.net" title="程序员社区，但是有些内容是收费的">csdn</a>
+    <a href="https://www.kaggle.com" title="机器学习人工智能爱好者的天堂">kaggle</a>
+</body>
+
+</html>
+<!-- 像分类，但是又不是类选择器，那么这样的就是伪类选择器 -->

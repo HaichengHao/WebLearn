@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style>
+        /* 选择具有title属性的元素，将其颜色设置为红色 */
+        /* [title]{
+            color: red;
+        } */
+        /* 选择具有title属性为pig1的元素，将其颜色设置为粉色 */
+        [title="pig1"]{
+            color: pink;
+        }
+        /* 选择具有title属性且属性名以a开头的属性设置为金色 */
+        /* 语法为 属性^="属性值" */
+        [title^="a"]{ 
+            color: gold;
+        }
+        /* 选中具有title属性且属性值是数字2结尾的属性，颜色设置为蓝色 */
+        [title$="2"]{
+            color: blue;
+        }
+        /* 选中具有title属性，且属性值中具有字母p就可以，将其颜色设置为绿色 */
+        [title*="p"]{
+            color: green;
+        }
+        /* 选中具有类属性，且属性值为school的元素，将其颜色设置为紫色 */
+        [class="school"]{
+            color: purple;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div title="pig1">小猪佩奇1</div>
+    <div title="pig2">小猪佩奇2</div>
+    <div title="apork">小猪排3</div>
+    <div title="apork" class="school">小猪排4</div>
+</body>
+
+</html>
