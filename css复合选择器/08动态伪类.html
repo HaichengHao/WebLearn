@@ -22,6 +22,32 @@
             color: red;
             font-size: 10px;
         }
+
+        span:hover{
+            color: blueviolet;
+        }
+        span:active{
+            color: red;
+        }
+        /* 聚焦时候变色,只有表单类才可以使用 */
+        input:focus{
+            background-color: aquamarine;
+            color: white;
+        }
+        fieldset{
+            background-color: bisque;
+            color: purple;
+        }
+        fieldset form{
+            color: aqua;
+        }
+        select{
+            background-color: aquamarine;
+        }
+        option:focus{
+            background-color: blue;
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -30,5 +56,24 @@
     <a href="https://www.csdn.net" title="程序员社区，但是有些内容是收费的">csdn</a>
     <a href="https://www.kaggle.com" title="机器学习人工智能爱好者的天堂">kaggle</a>
     <a href="https://www.asus.com" title="华硕官网">ASUS</a>
+    <span>变色</span>
+    <form action="https://www.baidu.com/s">
+        <input type="text" name="wd">
+        <input type="text">
+        <input type="text">
+        <button type="submit">提交</button>
+    </form>
+    <fieldset>
+        <legend>下拉选择</legend>
+        <form>
+            地区:<select>
+                <option>杭州</option>
+                <option>重庆</option>
+                <option selected>铁岭</option>
+                <option disabled>澳门</option>
+            </select>
+        </form>
+    </fieldset>
+    
 </body>
 </html>

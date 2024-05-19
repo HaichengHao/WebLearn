@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类1</title>
+    <style>
+        /* 结构伪类，div的子元素的第一个子元素且得是p -结构1*/
+        /* div>p:first-child{
+            color: rebeccapurple;
+        } */
+        
+        /* 结构2 */
+        /* div>p:first-child{
+            color: rebeccapurple;
+        } */
+
+        /* 结构3 */
+        /* div的儿子元素且儿子得是p,而且得是第一个p,结构3又不满足，因为其后的嫡长子元素为marquee*/
+        div>p:first-child{
+            color: rebeccapurple;
+        }
+        /* 所以如果想越过marquee，那么可以使用后代选择器而不是子代选择器,这样就可以了 */
+        
+        /* 选中祖先是 div 的p,且在其结构范围内得为第一个p的p元素 */
+        div p:first-child{
+            color: rebeccapurple;
+        }
+
+        /* 结构4 */
+        /* p元素，且在其结构内是第一个p */
+        p:first-child{
+            color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <!-- 结构1 -->
+    <!-- <div>
+        <p class="first">张三:100分</p>
+        <p>李四:98分</p>
+        <p>王五:67分</p>
+        <p>赵六:97分</p>
+    </div> -->
+
+    <!-- 结构2 -->
+    <!-- 在结构2的情况中，样式并不会发生改变 -->
+    <!-- 为什么呢？因为我们指定的是div的儿子元素，且得是p,但是div下的第一个是span，所以不行-->
+    <!-- <div>
+        <span>张三:100分</span>
+        <p>李四:98分</p>
+        <p>王五:67分</p>
+        <p>赵六:97分</p>
+    </div> -->
+
+    <!-- 结构3 -->
+    <!-- <p>测试3</p>
+    <div>
+        <p>测试1</p>
+        <marquee>
+            <p>测试2</p>
+            <span>张三:100分</span>
+            <p>陈九</p>
+        </marquee>
+        <p>李四:98分</p>
+        <p>王五:67分</p>
+        <p>赵六:97分</p>
+    </div> -->
+
+    <!-- 结构4 -->
+    <p>测试3</p> <!--在其结构内是第一个p-->
+    <div>
+        <p>测试1</p> <!--在其结构内是第一个p-->
+        <marquee>
+            <p>测试2</p> <!--在其结构内是第一个p-->
+            <span>张三:100分</span>
+            <p>陈九</p>
+        </marquee>
+        <p>李四:98分</p>
+        <p>王五:67分</p>
+        <p>赵六:97分</p>
+    </div>
+</body>
+</html>
