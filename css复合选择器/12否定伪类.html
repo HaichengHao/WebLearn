@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>否定伪类</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        /* 选中div所有儿子p元素将其设置为红色，但fail类的除外 */
+        div>p:not(.fail){
+            color: red;
+        }
+        /* 选中div所有儿子p元素悬浮时为瑞贝卡紫，但属于fail类的除外 */
+        div>p:not(.fail):hover{
+            color: rebeccapurple;
+        }
+        /* 属性选择器，title为‘不及格’的元素悬浮时为蓝色 */
+        [title="不及格"]:hover{
+            color: blue;
+        }
+        /* 选中的是div的儿子p元素，但是排除title属性以‘你要加油开头的’ */
+        div>p:not([title^="你要加油"]){
+            color: red;
+        }
+        /* 选中的是div的儿子p元素，除第一个儿子外其余的p设置为蓝色 */
+        div>p:not(:first-child){
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>张三:97分</p>
+        <p>李四:88分</p>
+        <p>王五:99分</p>
+        <p>琴六:68分</p>
+        <p class="fail" title="你要加油">王琦:56分</p>
+        <p class="fail" title="不及格">王琦:56分</p>
+        <p class="fail" title="不及格">什八:57分</p>
+    </div>
+    
+
+    
+</body>
+</html>

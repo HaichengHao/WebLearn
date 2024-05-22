@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类2</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        /* div嫡子为p,且为嫡长子，则将其颜色设置为红色 */
+        div>p:first-child {
+            color: red;
+        }
+
+        /* div嫡子为p,且为老幺，则将其颜色设置为紫色 */
+        div>p:last-child {
+            color: purple;
+        }
+
+        /* div嫡子为p,且为老2，则将其颜色设置为黄色 */
+        /* 这里用到nth-child(位序) 则可以指定第n个元素的样式，n的取值范围为0-+infinite
+        但是0是不被启用的
+        注意与编程语言中常用的以0为起始元素不同，n是以1为指定位序元素的，但其本身是从0开始 */
+        div>p:nth-child(2) {
+            color: yellow;
+        }
+
+        /* 选中所有偶数位序的儿子p元素，颜色设置为蓝色 */
+        div>p:nth-child(2n){ /*括号里也可以写even 即偶数*/
+            color: blue;
+        }
+        /* 选中所有奇数位序的儿子p元素，颜色设置为棕色，20px*/
+        div>p:nth-child(2n-1){ /*括号里也可以写odd 即奇数*/
+            
+            color: brown;
+            font-size: 20px;
+        }
+        /* 选中前两个，颜色设置为绿色，30px */
+        div>p:nth-child(-n+2){
+            /* -0+2=2，-1+2=1 ，-2+2=0（但是又不是从0开始，不存在第0个p） */
+            color: green;
+            font-size: 30px;
+        }
+        div>p:nth-child(3n+4){
+            color: aquamarine;
+        }
+        /* 选中div的第一个儿子p元素(按照所有同类型的兄弟计算的) */
+        div>p:first-of-type{
+            color: aquamarine;
+        }
+         /* 选中div的最后一个儿子p元素(按照所有同类型的兄弟计算的) */
+         div>p:last-of-type{
+            color: aquamarine;
+        }
+        /* 选中div的第二个儿子p元素，颜色设置为红色，背景色设置为绿色 */
+        div>p:nth-of-type(2){
+            color: red;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>0</span>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+        <span>01</span>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+    </div>
+</body>
+
+</html>
