@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        /* 伪元素很像元素，但不是元素，是元素中的一些特殊位置 */
+        div::first-letter{ /*div中的首字母设置为红色，字号为40px*/
+            color: red;
+            font-size: 40px;
+        }
+        /* 将div第一行元素的背景色设置为黄色 */
+        div::first-line{
+            background-color: yellow;
+        }
+        /* 将鼠标选中的文字的背景色设置为绿色,字体设置为红色 */
+        div::selection{
+            background-color: green;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 在vscode中，可以利用 lorem 来随机生成一段英文 
+    也可利用 lorem数字 如lorem5 会随机生成五个单词组成的-->
+    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore magnam in nulla. Eius soluta aperiam incidunt enim tenetur accusantium impedit dolore, commodi minima atque. Dolorum aliquid repudiandae vel facilis doloremque.</div>
+    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, dolores.</div>
+</body>
+</html>

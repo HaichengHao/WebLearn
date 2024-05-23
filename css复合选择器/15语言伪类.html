@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语言伪类</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        /* 选中div,且语言为zh-CN的div */
+        div:lang(zh-CN){
+            color: red;
+        }
+        p:lang(en){
+            color: blueviolet;
+        }
+        :lang(hawaai){
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div lang="hawaai">aloha</div>
+    <div lang="zh-CN">你好</div>
+    <div>seig</div> <!--这个也会变色，因为默认全局为zh-CN，那么按照语言伪类来讲，他就会变成红色-->
+    <p lang="en">hello</p>
+    <span>bonjor</span>
+</body>
+</html>

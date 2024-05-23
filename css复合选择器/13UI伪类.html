@@ -7,11 +7,16 @@
     <title>UI伪类</title>
     <link rel="icon" href="../mypage.ico">
     <style>
-        input:focus{
+        input:checked{
             width: 100px;
             height: 100px;
-            color: red;
             background-color: aqua;
+        }
+        input:disabled{
+            background-color: rebeccapurple;
+        }
+        input:enabled{
+            background-color: aquamarine;
         }
     </style>
 </head>
@@ -23,7 +28,9 @@
             爱好:
             <input type="checkbox">抽烟
             <input type="checkbox">喝酒
-            <input type="checkbox">烫头
+            <input type="checkbox" checked>烫头
+            <input type="password" maxlength="6">
+            <input type="text" disabled>
         </form>
     </fieldset>
 

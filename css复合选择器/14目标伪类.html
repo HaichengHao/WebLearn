@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>目标伪类</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        :root {
+            background-color: aquamarine;
+        }
+
+        div {
+            background-color: aliceblue;
+            height: 200px;
+            border-style: dotted;
+
+        }
+        
+        div:target {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#di1">去看第一个</a>
+    <a href="#di2">第2个</a>
+    <a href="#di3">第3个</a>
+    <a href="#di4">第4个</a>
+    <a href="#di5">第5个</a>
+    <a href="#di6">第6个</a>
+
+    <div id="di1">1</div>
+    <br>
+    <div id="di2">2</div>
+    <br>
+    <div id="di3">3</div>
+    <br>
+    <div id="di4">4</div>
+    <br>
+    <div id="di5">5</div>
+    <br>
+    <div id="di6">6</div>
+    <br>
+</body>
+
+</html>
