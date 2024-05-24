@@ -1,31 +1,63 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>伪元素选择器</title>
     <link rel="icon" href="../mypage.ico">
     <style>
-        /* 伪元素很像元素，但不是元素，是元素中的一些特殊位置 */
-        div::first-letter{ /*div中的首字母设置为红色，字号为40px*/
+        /* 伪元素很像元素，但不是元素，是元素中的一些特殊位置！！！！！ */
+        div::first-letter {
+            /*div中的首字母设置为红色，字号为40px*/
             color: red;
             font-size: 40px;
         }
+
         /* 将div第一行元素的背景色设置为黄色 */
-        div::first-line{
+        div::first-line {
             background-color: yellow;
         }
+
         /* 将鼠标选中的文字的背景色设置为绿色,字体设置为红色 */
-        div::selection{
+        div::selection {
             background-color: green;
             color: red;
         }
+        /* 将输入框中placeholder的颜色设置为天蓝色 */
+        input::placeholder{
+            color: skyblue;
+        }
+        /* 聚焦时，输入框的颜色设置为绿色，字体颜色设置为紫色，这里注意查看08动态伪类的知识，与本节课无关 */
+        input:focus{
+            background-color: green;
+            color: purple;
+        }
+        /* 在p元素中的字符前的位置加上货币符号 */
+        p::before{
+            content: '￥';
+        }
+        /* 在p元素之后的位置加上'.00' */
+        p::after{
+            content: '.00';
+        }
+        
     </style>
 </head>
+
 <body>
     <!-- 在vscode中，可以利用 lorem 来随机生成一段英文 
     也可利用 lorem数字 如lorem5 会随机生成五个单词组成的-->
-    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore magnam in nulla. Eius soluta aperiam incidunt enim tenetur accusantium impedit dolore, commodi minima atque. Dolorum aliquid repudiandae vel facilis doloremque.</div>
+    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore magnam in nulla. Eius soluta aperiam
+        incidunt enim tenetur accusantium impedit dolore, commodi minima atque. Dolorum aliquid repudiandae vel facilis
+        doloremque.</div>
     <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, dolores.</div>
+    用户名: <input type="text" placeholder="请输入您的用户名"><br>
+    密码: <input type="password" placeholder="请输入您的密码">
+    <p>199</p>
+    <p>299</p>
+    <p>399</p>
+    <p>499</p>
 </body>
+
 </html>
