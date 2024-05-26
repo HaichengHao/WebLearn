@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>颜色第二种表示方式rgb与rgba</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        .a1{
+            color: rgb(255, 0, 0);
+        }
+        .a2{
+            color: rgb(183, 57, 152);
+        }
+        .a3{
+            color: rgb(70, 188, 188)
+        }
+        .a4{
+            color: rgba(138, 43, 226);
+        }
+        /* rgba 后面多出的a是用来控制透明度的,0.5表示半透明，1为不透明，也可以写百分比形式 */
+        .a5{
+            color: rgba(112, 40, 159,60%);
+        }
+        h2::selection{
+            background-color: blueviolet;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="a1">hello</h2>
+    <h2 class="a2">aloha</h2>
+    <h2 class="a3">bonjor</h2>
+    <h2 class="a4">你好</h2>
+    <h2 class="a5">卡昆卡</h2>
+</body>
+
+</html>

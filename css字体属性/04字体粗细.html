@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体粗细font-weight</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        div::before{
+            content: "你";
+        }
+        div{
+            font-size: 100px;
+            font-family: "翩翩体-简";
+        }
+        .a1{
+            font-weight: lighter;
+        }
+        .a2{
+            font-weight: normal;
+        }
+        .a3{
+            font-weight: bold;
+        }
+        .a4{
+            font-weight: bolder; /*如果所用的字体中没有设计bolder,那么就按照bold来*/
+        }
+        .a5{ /*也可以写数值，取值范围为100-1000，如果没设计还是会按照基础的三种来 */
+            font-weight: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="a1">紫气东来</div>
+    <div class="a2">紫气东来</div>
+    <div class="a3">紫气东来</div>
+    <div class="a4">紫气东来</div>
+    <div class="a5">紫气东来</div>
+</body>
+</html>

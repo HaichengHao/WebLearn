@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04颜色第四种表示_HSL与HSLA</title>
+    <style>
+        h2{
+            /* color: hsl(hue, saturation, lightness); */
+            /* hue 色相(用角度表示，因为其是色相环)  saturation饱和度 lightness亮度*/
+            color: hsla(0, 30%, 50%, 0.611);
+        }
+        p{
+            color: hsl(300deg, 60%, 60%);
+        }
+    </style>
+</head>
+<body>
+    <h2>你好</h2>
+    <p>hsl中的第一个参数hue的单位是度数，即0-360，表示的是色相</p>
+    <img src="../others/色相环.jpg" title="色相环">
+    <p>hsl第二个参数saturation是饱和度，取值范围为0%-100%</p>
+    <p>hsl第三个参数是lightness是亮度，取值范围是0%-100%</p>
+    <p></p>
+</body>
+</html>

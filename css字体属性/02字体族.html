@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体族</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        :root{
+            font-size: 50px;
+            color: purple;
+            background-color: antiquewhite;
+        }
+        .a1{
+            font-family: "微软雅黑"; 
+        }
+        .a2{
+            font-family:'楷体' serif; /*如果不行，那就衬线字体收尾*/
+        }
+        .a3{
+            font-family:"华文彩云";
+        }
+        .a4{
+            font-family: "宋体";
+        }
+        .a5{
+            font-family: "翩翩体-简","宋体","华文彩云" sans-serif /*这样写的话达到非则替，如果没有翩翩体就配宋体，没有宋体就配华文彩云，如果都不行，那就拿一个非衬线*/
+        }
+    </style>
+</head>
+<body>
+    <div class="a1">紫气东来</div>
+    <div class="a2">紫气东来</div>
+    <div class="a3">紫气东来</div>
+    <div class="a4">紫气东来</div>
+    <div class="a5">紫气东来</div>
+</body>
+</html>
