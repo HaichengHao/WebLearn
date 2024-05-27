@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边框相关属性</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        table{
+            /* 表格边框宽度 */
+            border-width: 1px;
+            /* 边框类型 */
+            border-style:  dashed; 
+            /* dashed 虚线 double双实线 dotted 圆点 weavy 波浪线*/
+            /* 边框颜色 */
+            border-color: aquamarine;
+            text-align: center;
+            /* 如果觉得麻烦，可以写复合属性,三个都得指定 */
+            border: 1px aquamarine dashed ;
+        }
+        th,td{
+            /* 再定义单元格里的属性 */
+            border: 0.2px aquamarine solid;
+        }
+        td:nth-child(2n-1){
+            background-color: aqua;
+        }
+        h2{
+            text-align: center;
+            border: 2px aqua dashed;
+        }
+        textarea{
+            border: 2px rebeccapurple dotted;
+        }
+        button{
+            border: 2px royalblue dashed;
+        }
+        select{
+            border: 2px red dashed;
+        }
+        select:hover{
+            background-color: green;
+            border: 2px blue dotted;
+        }
+        select::selection{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>测试表格</caption>
+        <thead>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td>男</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>女</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td>男</td>
+                <td>11</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <div>
+        <p>边框的属性并不是只有表格才能使用，其它元素也可以使用</p>
+        <h2>标题能用</h2>
+        <form>
+            <textarea placeholder="文本域也能用"></textarea>
+            性别:<input type="radio" name="gender" checked>男<input type="radio" name="gender">女
+            爱好:<select>
+                <option>抽烟</option>
+                <option selected>喝酒</option>
+                <option>烫头</option>
+            </select>
+            <button type="reset">重置</button>
+        </form>
+    </div>
+</body>
+</html>

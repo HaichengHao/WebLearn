@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行高注意事项</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        #a1{
+            font-size: 40px;
+            line-height: 60px;
+            height: 60px;
+        }
+
+        /* 没有设置height那么行高就是高 */
+
+        /* 行高的应用场景1:调整多行文字的问题 */
+        /* 行高的应用场景2:调整单行文字的垂直居中 ,即让行高和高相同即可，但是此方式不适用于多行文字的垂直居中*/
+        #a2{
+            font-size: 40px;
+            height: 60px;
+            line-height: 60px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, quis? Excepturi voluptatem porro totam,
+        reiciendis doloribus impedit iusto sint iste ipsum velit alias libero odit, optio aliquam dolores quidem.
+        Temporibus!</div>
+   <div id="a2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, harum!</div>
+</body>
+
+</html>

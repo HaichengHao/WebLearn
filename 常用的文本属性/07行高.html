@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行高</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        div{
+            font-size: 40px;
+            /* 行高第一种写法是指定像素 */
+            /* line-height: 40px; */
+            /* 行高第二种写法是直接写描述,几乎不用 */
+            /* line-height: normal; */
+            /* 行高第三种写法，写数字 */
+            line-height: 2; /*这里写的2 其实最终的意思就是 2*font-size,即行高是字体大小的2倍 */
+            font-family: 翩翩体-简;
+        }
+        /* line-height 和 font-size 不能相等，否则很危险，会出现重叠 */
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet.紫气东来Lorem ipsum dolor sit amet.紫气东来Lorem ipsum dolor sit amet.紫气东来Lorem ipsum dolor sit amet.紫气东来Lorem ipsum dolor sit amet.紫气东来Lorem ipsum dolor sit amet.紫气东来Lorem ipsum dolor sit amet.紫气东来</div>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列表相关属性</title>
+    <style>
+        ul{
+            /* list-style-type:none; 其实最常用的就是none,用于清除默认的css样式 */
+            list-style-type: square; /*实心方块*/
+            list-style-type: lower-alpha; /*小写罗马*/
+            list-style-type: upper-alpha; /*大写罗马*/
+            list-style-type: lower-greek; /*小写希腊*/
+
+            /* 有一个容易迷惑的 */
+            list-style-type: decimal;
+        }
+        ul#tst_os li{
+            background-color: aquamarine;
+            list-style-position: outside; /*这样的话无序列表前的小标号的位置会变到外部*/
+        }
+        ul#tst_is li{
+            background-color: aquamarine;
+            list-style-position: inside; /*这样的话无序列表前的小标号的位置会变到内部*/
+        }
+        ul#tst_img li{
+            background-color:aquamarine ;
+            list-style-position: outside;
+            list-style-image:  url(../others/mypage.ico);
+            /* height: 20px; */
+        }
+        /* 复合属性 */
+        ul#multi li{
+            background-color: aquamarine;
+            list-style: square outside  ;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li> Lorem ipsum dolor sit.</li>
+        <li>紫气东来什么意思</li>
+        <li>走向成功的方法</li>
+    </ul>
+
+    <div>
+        <p>经过decimal修饰的无序列表居然变得像有序列表一样，但是其还是一个无序列表，
+            只是这样的话可以方便
+            盲人阅读器识别
+        </p>
+        <img src="../others/dcm.png">
+    </div>
+    <hr>
+    <p>如果指定的是list-style-position:outside,那么小标号会在外部</p>
+    <ul id="tst_os">
+        <li> Lorem ipsum dolor sit.</li>
+        <li>紫气东来什么意思</li>
+        <li>走向成功的方法</li>
+    </ul>
+    <hr>
+    <p>如果指定的是list-style-position:inside,那么小标号会在内部</p>
+    <ul id="tst_is">
+        <li> 啊.</li>
+        <li>紫气东来什么意思</li>
+        <li>走向成功的方法</li>
+    </ul>
+    <hr>
+
+    <p>指定list-style-image可以让自己的标号变成自己定义的形式</p>
+    <ul id="tst_img">
+        <li> Lorem ipsum dolor sit.</li>
+        <li>紫气东来什么意思</li>
+        <li>走向成功的方法</li>
+    </ul>
+
+    <hr>
+    <p>指定list-style写出复合属性</p>
+    <ul id="multi">
+        <li> Lorem ipsum dolor sit.</li>
+        <li>紫气东来什么意思</li>
+        <li>走向成功的方法</li>
+    </ul>
+
+
+</body>
+</html>

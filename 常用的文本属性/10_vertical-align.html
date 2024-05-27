@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vertical-align</title>
+    <style>
+        div {
+            text-align: center;
+            font-size: 40px;
+            height: 100px;
+            /* line-height: 40px; */
+            background-color: aquamarine;
+        }
+
+        span {
+            font-size: 20px;
+            background-color: aqua;
+            vertical-align: top;
+            vertical-align: middle;
+            /*使元素的中部(非文字的中部)与父元素的基线加上父元素x-height的一半对齐 */
+            /* vertical-align: bottom; */
+            /* vertical-align: baseline; 默认就是baseline */
+
+        }
+
+        p img {
+            vertical-align: top;
+            /* 图片比文字高度大时，文字不动图片动，反之则正常 */
+        }
+
+        textarea {
+            vertical-align: top;
+            /* 文本域同上 */
+        }
+
+
+
+        /* vertical-align 是不能够控制块级元素的 */
+        #a1 {
+            background-color: bisque;
+            width: 400px;
+            height: 400px;
+        }
+
+        #a2 {
+            width: 100px;
+            height: 100px; 
+            vertical-align: middle; /*vertical-align不起作用 它之作用与行内元素和行内块元素，不作用于块级元素*/
+        }
+        table{
+            text-align: center;
+            border: 1px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Lorem ipsum dolor sit amet.x<span>x前端</span></div>
+    <p>如果设置的是middle,注意不是文字的中部，而是包含文字的元素的中部</p>
+    <img src="../others/对齐.png">
+    <p>一张图片:<img src="../others/spring.jpg"></p>
+    <form>
+        废话:<textarea placeholder="请输入你想说的废话" maxlength="20"></textarea>
+    </form>
+    <div id="a1">
+        <div id="a2"></div>
+    </div>
+
+    <table border="1" cellspacing="0">
+        <caption>人员信息表</caption>
+        <thead>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+        </thead>
+        <tbody>
+            <tr height="100px">
+                <td>张三</td>
+                <td>20</td>
+                <td>男</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>30</td>
+                <td>男</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

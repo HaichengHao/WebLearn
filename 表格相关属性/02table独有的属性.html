@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table独有的属性</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        table{
+            border: 2px orange solid;
+            text-align: center;
+            width: 500px;
+            /* 1控制表格列宽的属性table-layout */
+            table-layout: auto;
+            /* 设置为auto则会自动根据单元格内容自动调整列宽
+            fixed 则为固定 */
+            /*2控制单元格边框之间的宽度  */
+            /* border-spacing: 0px; */
+            /*3 合并相邻单元格的边框 */
+            /* border-collapse: collapse;  */
+            /* collapse合并 separate分开 */
+
+            /*4 隐藏没有内容的单元格 */
+            empty-cells: hide; 
+            /* show 则展示，hide则隐藏 */
+
+            /* 5设置表格标题的位置 */
+            caption-side: bottom;
+            /* 可以设置为top(默认)或者bottom 这样表格标题就会跑到表格下面 */
+        }
+        th,td{
+            border: 0.1px green solid;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>测试表格</caption>
+        <thead>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td>男</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>女</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td>男</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
