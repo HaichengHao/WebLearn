@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>字体的复合属性</title>
+    <title>字体颜色</title>
     <link rel="icon" href="../mypage.ico">
     <style>
-        /* 复合属性是有顺序上的要求的，不能随便乱写 字体大小和字体族必须要写上*/
-        /* 字体大小和字体族必须是倒数第二和倒数第一位,不同的属性要用空格隔开 */
+        :root{
+            font-size: 40px;
+        }
         .a1{
-            font: bold italic 100px "翩翩体-简",serif ;
-
+            color: hsl(0deg, 60%, 50%);
+        }
+        .a2{
+            color: #b82a2a88; /*hexa 最后两位控制透明度*/
+        }
+        .a3{
+            color: rgba(255, 0, 0, 0.5);/*rgba最后一个参数控制透明度*/
         }
     </style>
 </head>

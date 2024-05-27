@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本修饰</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        :root{
+            font-size: 30px;
+            rotate: 45deg;
+        }
+        .a1{
+            text-decoration: overline dashed;/*上划线 dashed 横线样式*/
+        }
+        .a1::selection{
+            background-color: green;
+            color: aliceblue;
+        }
+        .a2{
+            text-decoration: underline dotted; /*下划线 点点样式*/
+        }
+        .a3{
+            text-decoration: line-through wavy; /*中划线/删除线 波浪纹*/
+        }
+        .a4{
+            text-decoration: none;/*无装饰,多用于去掉超链接默认带的下划线!!*/
+        }
+        .a4:focus{
+            background-color: blueviolet;
+            color: aliceblue;
+        }
+        .a4:link{
+            color: red;
+        }
+        .a4:visited{
+            color: gray;
+        }
+        .a4:hover{
+            background-color: aqua;
+            color: aliceblue;
+        }
+        .a4:active{
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="a1">Lorem ipsum dolor sit amet.紫气东来</div>
+    <div class="a2">Lorem ipsum dolor sit amet.紫气东来</div>
+    <div class="a3">Lorem ipsum dolor sit amet.紫气东来</div>
+    <a class="a4" href="https://baike.baidu.com/item/%E7%B4%AB%E6%B0%94%E4%B8%9C%E6%9D%A5/2847" title="点我跳转">Lorem ipsum dolor sit amet.紫气东来</a>
+    <div class="a5">Lorem ipsum dolor sit amet.紫气东来</div>
+    <ins>紫气东来</ins> <!--自带下划线-->
+    <del>紫气东来</del> <!--自带删除线-->
+    
+</body>
+</html>

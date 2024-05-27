@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本间距</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        :root{
+            font-size: 30px;
+            color: rebeccapurple;
+        }
+        .a2{
+            letter-spacing: 10px; /*字母间隔10px，文字之间也有间隔,它会将汉字识别为字母*/
+        }
+        .a3{
+            word-spacing: 10px; /*单词之间的间隔为10px，它不会把汉字识别为单词，因此汉字不会有指定的间隔*/
+        }
+        /* 注意，上面的两种间距都可以给负值 */
+        .a4{
+            letter-spacing: -10px;
+        }
+        .a5{
+            word-spacing: -20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="a1">Lorem ipsum dolor sit amet.紫气东来</div>
+    <div class="a2">Lorem ipsum dolor sit amet.紫气东来</div>
+    <div class="a3">Lorem ipsum dolor sit amet.紫气东来</div>
+    <div class="a4">Lorem ipsum dolor sit amet.紫气东来</div>
+    <div class="a5">Lorem ipsum dolor sit amet.紫气东来</div>
+</body>
+</html>
