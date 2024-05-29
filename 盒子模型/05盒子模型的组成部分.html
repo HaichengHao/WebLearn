@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型的组成部分</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        /* div{
+            position:relative;
+            top: 50%;
+            left: 50%;
+        } */
+        :root{
+            font-size: 30px;
+            text-align: center;
+        }
+        #wb{
+            width: 700px;
+            height: 700px;
+            background-color: aquamarine;
+        }
+        #bor{
+            width: 600px;
+            height: 600px;
+            background-color: orange;
+            background-position: left 100px;
+        }
+        #pad{
+            width: 550px;
+            height: 550px;
+            background-color: orangered;
+        }
+        #con{
+            width: 500px;
+            height: 500px;
+            background-color: blueviolet;
+            line-height: 500px;
+        }
+        .tst1{
+            width: 400px;
+            height: 400px;
+            background-color: olivedrab;
+            /* 内边距 设置的背景颜色会填充内边距区域*/
+            padding: 20px;
+            /* 边框 设置的颜色悬在上方，下方的颜色还是背景色，用三维视觉考虑*/
+            border: 10px dashed green;
+            /* 外边距 只影响盒子模型的位置，不会影响盒子的大小*/
+            margin: 200px;
+
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wb"> 外边距margin
+        <div id="bor"> 边框border
+            <div id="pad"> 内边距padding
+                <div id="con">内容区content</div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="tst1">hello</div>
+    <p>盒子大小的计算方式 内容区+ &#40;padding+border&#41;&times;2</p>
+</body>
+
+</html>

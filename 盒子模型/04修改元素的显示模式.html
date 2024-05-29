@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改元素的显示模式</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            /* 利用display 修改div的样式，将其显示模式改为行内块,注意，不能修改成行内
+            因为其本身就是块元素，如果修改为行内，那么其高度和宽度就会失效 */
+            display: inline-block;
+        }
+        #d1{
+            background-color: orange;
+        }
+        #d2{
+            background-color: aqua;
+        }
+        #d3{
+            background-color: brown;
+        }
+        a{
+            display: block;
+            color: white;
+            background-color: aquamarine;
+            text-decoration: none;
+        }
+        #bd{
+            background-color: orange;
+        }
+        #tb{
+            background-color: blueviolet;
+        }
+        #bl{
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <hr>
+    将行内元素a的显示模式设置为block,这样每个a就独占一行
+    <a href="https://www.baidu.com" id="bd">百度一下</a>
+    <a href="https://taobao.com" id="tb">淘宝网</a>
+    <a href="https://bilibili.com" id="bl">bilibili</a>
+</body>
+</html>

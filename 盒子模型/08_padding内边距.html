@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型的内边距</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        #d1{
+            background-color: aquamarine;
+            width: 400px;
+            height: 400px;
+            /* 设置padding会影响盒子模型的整体大小 */
+            
+            /* 精细写法 */
+            padding-top: 30px ;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            padding-left: 5px;
+            /* 其实直接写padding是复合属性的写法
+            默认按照上 右 下 左 顺时针来 */
+            padding: 30px 20px  10px 5px;
+            /* 如果只写一个，则表示四个方向上的内边距都是一个值 */
+            /* 如果写两个，第一个代表上下，第二个代表左右 */
+            padding: 30px 20px;
+        }
+        span{
+            /* 注意，行内元素不可通过Css设置宽高，其宽高是按照其中的内容撑开的 */
+            /* width: 20px;
+            height: 20px; */
+            background-color: orangered;
+            padding: 10px 20px 30px 40px;
+            /* 注意观察，行内元素的上下内边距虽然可以设置，但是其不占位，可能会发生元素重叠
+            但是块元素和行内块元素就不会有这样的问题，当然如果真的想让其不重叠，可以修改显示模式 */
+            /* display: block; */
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            /* 对于行内块元素来说，其四个方向的内边距是可以完美显示的，块元素就更不用说 */
+            padding: 10px 20px 30px 40px ;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"> hello </div><hr>
+    <span>give me five</span>
+    <div>好好学习Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, magni?</div>
+    <hr>
+    <img src="../mypage.ico"><img src="../mypage.ico"><img src="../mypage.ico"><img src="../mypage.ico">
+</body>
+</html>
