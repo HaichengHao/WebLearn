@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>总结各元素的显示模式</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        :root {
+            background-color: whitesmoke;
+            
+            font-size: 20px;
+        }
+        div{
+            height: 200px;
+        }
+
+        #block {
+            background-color: aquamarine;
+            color: orangered;
+        }
+
+        #inline {
+            background-color: orangered;
+            color: aquamarine;
+        }
+
+        #inline-block {
+            background-color: blueviolet;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="block">
+    块元素(block)
+        <pre>
+    1 主体结构标签 &lt;html&gt; 、&lt;body&gt;
+    2 排版标签 &lt;h1&gt;-&lt;h6&gt; &lt;hr&gt; &lt;p&gt; &lt;pre&gt; &lt;div&gt;
+    3 列表标签 &lt;ul &gt; &lt;ol&gt; &lt;li&gt; &lt;dl&gt; &lt;dt&gt; &lt;dd&gt;
+    4 表格相关标签 &lt;table&gt; &lt;tbody&gt; &lt;thead&gt; &lt;tfoot&gt; &lt;tr&gt; &lt;caption&gt;
+    5 &lt;form&gt;与&lt;option&gt;
+        </pre>
+    </div>
+    <div id="inline">
+        行内元素(inline)
+        <pre>
+    1 文本标签  &lt;br&gt; &lt;em&gt; &lt;strong&gt; &lt;sub&gt; &lt;sup&gt; &lt;del&gt; &lt;ins&gt;
+    2 &lt;a&gt; 与 &lt;label&gt;
+        </pre>
+    </div>
+    <div id="inline-block">
+        行内块元素(inline-block)
+        <pre>
+    1 图片 &lt;img&gt;
+    2 单元格 &lt;td&gt; &lt;th&gt;
+    3 表单控件 &lt;input&gt; &lt;textarea&gt; &lt;select&gt; &lt;button&gt;
+    4 框架标签 &lt;iframe&gt;
+        </pre>
+    </div>
+</body>
+
+</html>

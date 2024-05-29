@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css常用长度单位</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        /* 第一种长度单位 像素 */
+        #d1{
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            background-color: aqua;
+        }
+
+        /* 第二种长度单位 em 相对于当前元素的font-size的倍数,如果当前元素没写font-size，就去找其父级元素的font-size，
+        如果都没有，那就按浏览器的默认font-size为基准
+        em是一个相对长度单位<hr>*/
+        /* 1em= 1*font-size*/
+        #d2{
+            width: 10em; /*10 × font-size= 10×20px=200px*/
+            height: 10em;
+            /* font-size: 20px; */ /*如果不写就去找父级元素，父级元素不写，就一直往外层找，如果最外层的html都没写font-size,那就按照浏览器的默认样式*/
+            background-color: orange;
+        }
+        /* 第三种长度单位rem,即root em 直接以根元素为参考标准 */
+        #d3{
+            width: 20rem;
+            height: 20rem;
+            background-color: orangered;
+        }
+        #d4{
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            background-color: wheat;
+        }
+        .inside{
+            /* 这里的width和height是相对于其父元素的宽高 */
+            width: 50%;
+            height: 50%;
+            font-size: 150%; /*相对于其父元素的1.5倍 即1.5×20=30px*/
+            background-color: blueviolet;
+        }
+        #tst{
+            text-indent: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div><hr>
+    <div id="d2"></div><hr>
+    <div id="d3"></div><hr>
+    <div id="d4">
+        <div class="inside">1</div>
+    </div>
+
+    <!-- 利用rem来控制首行缩进二字符 -->
+    <div id="tst">综合美联社、美国有线电视新闻网（CNN）报道，以色列总理内塔尼亚胡当地时间27日表示，以色列对加沙南部城市拉法一处难民营的袭击是一个“悲剧性错误”。CNN称，这场袭击导致至少45人死亡。加沙卫生部门27日凌晨则发表声明称，以军26日夜间对拉法西北部一处难民营的空袭已造成50人死亡、数十人受伤。</div>
+</body>
+
+</html>

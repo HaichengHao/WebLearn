@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的显示模式</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        :root {
+            background-color: bisque;cursor: url('../others/arrow.png'), pointer;
+        }
+
+        #d1 {
+            background-color: aqua;
+        }
+
+        #d2 {
+            background-color: orangered;
+        }
+
+        #d3 {
+            background-color: aquamarine;
+        }
+        span{
+            color: white;
+        }
+        #s1{
+            background-color: rgb(4, 216, 146);
+        }
+        #s2{
+            background-color: blueviolet;
+        }
+        #s3{
+            background-color: blue;
+        }
+        span:nth-child(2n){
+            background-color: orchid;
+        }
+        span:nth-child(2n-1){
+            background-color: brown;
+        }
+        img{
+            width: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>块元素(block)独占一行，从上到下排列，不会和其他元素共用一行<br>
+        其默认宽度是撑满整个父元素的<br>
+        其默认高度是由div中的内容决定的<br>
+        可以通过css设置宽高的
+    </p>
+    <div id="d1">
+        Lorem ipsum dolor sit.<br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa in vitae sit possimus ut mollitia
+        accusantium optio eos asperiores, fugiat nostrum assumenda dignissimos! Nemo quisquam ut enim magnam nihil?
+    </div>
+    <div id="d2">
+        你好，世界
+    </div>
+    <div id="d3">天空好像下雨</div>
+    <hr>
+    <p>行内元素(inline)在页面中不会独占一行，<br>一行中不能容纳下的元素，<br>会在下一行继续从右到左排列<br>行内元素无法通过css设置宽高</p>
+    <span id="s1">你好</span>
+    <span id="s2">aloha</span>
+    <span id="s3">bonjour</span>
+    <span>Lorem.</span>
+    <span>adcs</span>
+    <span>bfad</span>
+    <span>cafae</span>
+    <span>dfaewd</span>
+    <span>eadafew</span>
+    <span>fafead</span>
+    <span>gafefq3r</span>
+    <span>hafefq3r</span>
+    <span>iafefq3r</span>
+    <span>jafefq3r</span>
+    <span>aafefq3r</span>
+    <span>bafefq3r</span>
+    <span>cafefq3r</span>
+ 
+<hr>
+<P>行内块(inline-block)又称内联块元素<br>在页面中不会独占一行，<br>一行中容纳不下的元素，会在下一行继续从左到右排列<br>默认宽度和高度由内容撑开，可以通过css设置宽高</P>
+<img src="../mypage.ico"><img src="../mypage.ico"><img src="../mypage.ico">
+</body>
+
+</html>
