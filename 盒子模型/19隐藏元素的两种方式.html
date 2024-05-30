@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐藏元素的两种方式</title>
+    <style>
+        :root{
+            background-color: bisque;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: aquamarine;
+            /* 第一种方式 */
+            /* display: none; */
+            /* 第二种方式 ,这种方式还会留白*/
+            visibility: hidden;
+        }
+        .box2{
+            background-color: skyblue;
+        }
+        #raw{
+            width: 200px;
+            height: 400px;
+
+        }
+        #dis_n{
+            width: 200px;
+            height: 200px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <hr>
+    <p>原始样式(未设置元素隐藏)</p>
+    <img src="../others/raw.png" id="raw">
+    <p>给第一个div设置display为none，第一个元素被隐藏，且位置被第二个div顶上</p>
+    <img src="../others/dis_n.png" id="dis_n">
+    <p>给第一个div设置visibility为hidden</p>
+    <img src="../others/vis_hn.png" id="vis_hn">
+
+</body>
+</html>

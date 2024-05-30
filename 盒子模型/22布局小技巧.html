@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布局小技巧</title>
+    <style>
+        #d1{
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            overflow: hidden;
+        }
+        #d2{
+            width: 200px;
+            height: 100px;
+            background-color: orange;
+            margin: 0 auto; /*可以让其自动左右居中*/
+            margin-top: 150px;
+            /* margin-left: 100px; */
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <div id="d2">inner</div>
+    </div>
+</body>
+</html>

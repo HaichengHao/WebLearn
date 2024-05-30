@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>处理内容溢出</title>
+    <style>
+        #d1 {
+            width: 400px;
+            height: 200px;
+            background-color: skyblue;
+            /* overflow默认值是visiable */
+            overflow: hidden;
+            overflow: scroll;
+            /* auto会自动决定是哪种处理方式，而Scroll不管有没有溢出都会显示滚动条 */
+            overflow: auto;
+            /* 其它 不建议使用*/
+            /* x轴方向溢出隐藏 */
+            overflow-x: hidden;
+            /* y轴方向溢出scroll */
+            overflow-y: scroll;
+        }
+        #d2{
+
+            width: 1000px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo dolorem aliquid cum incidunt,
+        accusantium nihil consequatur sapiente,
+        <div id="d2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa impedit dolores at ea dolorum cumque excepturi ullam? Eum reprehenderit ducimus possimus veniam provident illo officiis ad quae deleniti, perspiciatis culpa cum soluta consectetur laboriosam voluptates. Quisquam, facere? Odio ea sit id vel minima praesentium tempore at iste? Molestias, corporis ut!</div> soluta sequi excepturi exercitationem architecto animi! Aliquam magni
+        quos atque provident consequatur quisquam, nisi quam rem vero nemo. Nesciunt modi qui eveniet quos fugiat illum,
+        nostrum mollitia nobis exercitationem enim, pariatur numquam fuga velit, facere odio perferendis. Eaque minima
+        magni error perspiciatis ipsam hic architecto, nesciunt itaque voluptatibus laborum molestias cum ipsum veniam
+        maxime quaerat illo similique accusamus. Laboriosam, ipsum? Nostrum nobis necessitatibus at fugit cum
+        perferendis, similique velit assumenda libero incidunt dolorem atque vitae quas maxime? Sit nostrum assumenda
+        fuga aut est!</div>
+</body>
+
+</html>

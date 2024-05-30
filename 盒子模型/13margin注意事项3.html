@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13margin注意事项3</title>
+    <style>
+        #d1{
+            width: 400px;
+            height: 400px;
+            background-color: deepskyblue;
+            margin: 50px;
+        }
+        img{
+            margin: 50px;
+
+        }
+        .sp1{
+            background-color: aquamarine;
+            margin-right: 30px;
+        }
+        .sp2{
+            background-color: orange;
+            margin-left: 10px;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+        .sp3{
+            background-color: blueviolet;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>块元素和行内块元素都是可以完美设置四个方向的外边距的</p>
+    <div id="d1">块级元素</div>
+    <div>hello</div>
+    <hr>
+    <img src="../mypage.ico">
+    <hr>
+
+    <p>行内元素的margin不能设置，即使设置了也没有效果</p>
+    <span class="sp1">你好</span><span class="sp2">你好</span><span class="sp3">你好</span>
+</body>
+</html>

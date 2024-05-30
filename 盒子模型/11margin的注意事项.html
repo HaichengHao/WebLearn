@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin的注意事项1</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        :root{
+            background-color: bisque;
+        }
+        .outer{
+            width: 400px;
+            height: 400px;
+            padding: 50px;
+            background-color: aquamarine;
+        }
+        .inner{
+            width: 100px;
+            height: 100px;
+            background-color: orangered;
+            margin:100px;
+        }
+        img{
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <hr>
+    <p>子元素的margin是参照父元素的content计算的</p>
+    <img src="../others/margin1.png">
+</body>
+</html>

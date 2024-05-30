@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin的注意事项2</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: orange;
+        }
+        .box2{
+            background-color: skyblue;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .box3{
+            background-color: green;
+        }
+        .img2{
+            margin-left: 30px;
+            margin-top: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <hr>
+    <p>img设置完上margin所有img都跟着动了，为什么?</p>
+    <p>上margin、左margin会影响自身的位置，下margin和左margin会影响兄弟的位置</p>
+    <img src="../mypage.ico" class="img1"><img src="../mypage.ico" class="img2"><img src="../mypage.ico">
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin塌陷问题</title>
+    <style>
+        .outer{
+            width: 400px;
+            /* height: 400px; */
+            background-color: aquamarine;
+            overflow: hidden;
+        }
+        .inner1{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* 下面这行代码有问题 */
+            /* margin-top: 50px; */
+            
+        }
+        .inner2{
+            width: 100px;
+            height: 100px;
+            background-color: orangered;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner1"></div>
+        <div class="inner2"></div>
+    </div>
+    <div>test</div>
+    <P>margin塌陷问题：第一个子元素的上margin和最后一个子元素的下margin会作用在父元素上</P>
+    <p>如何解决margin塌陷?</p>
+    <p>1 给父元素设置不为0的padding</p>
+    <p>2 给父元素设置宽度不为0的border</p>
+    <p>3 给父元素设置css样式 overflow 为 hidden</p>
+    
+</body>
+</html>

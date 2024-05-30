@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>样式的继承</title>
+    <style>
+        #d1{
+            height: 600px;
+            background-color: gray;
+            padding: 50px;
+        }
+        #d2{
+            height: 400px;
+            background-color: orange;
+            padding: 50px;
+            /* 如果把字体的属性写在d2身上，d3的字体样式并未消失，因为其继承了父类的样式，同样
+            放在d1身上或者再外层的body身上也是可以的 */
+            font-style: oblique;
+            font-family: 翩翩体-简;
+            font-size: 50px;
+            font-weight: 1000;
+        }
+        #d3{
+            height: 200px;
+            background-color: tomato;
+            color: blueviolet;
+            /* font-style: oblique;
+            font-family: 翩翩体-简;
+            font-size: 50px;
+            font-weight: 1000; */
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <div id="d2">
+            <div id="d3">你好啊</div>
+        </div>
+    </div>
+    <hr>
+    <p>我们可以利用开发者工具查看继承关系,高亮的是继承下来的，不亮的是没继承的</p>
+    <img src="../others/tst1.png" >
+
+    <p>样式的继承</p>
+    <p>有些样式会继承，元素如果本身设置了某个样式，就使用本身设置的样式；<br>
+    但如果本身没有设置某个样式，会从父元素开始一级一级继承(优先继承离得近的父元素)</p>
+    <p>会继承的css属性</p>
+    <p>字体属性、文本属性(除了vertical-align)、文字颜色等</p>
+    <p>不会继承的css属性</p>
+    <p>边框、背景、内边距、外边距、宽高、溢出方式等</p>
+    <p style="color: red;">一个规律：能继承的属性，都是不影响布局的，简单说，都是和盒子模型没关系的</p>
+</body>
+</html>

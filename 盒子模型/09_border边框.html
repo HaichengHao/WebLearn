@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边框border</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        div{
+            width: 400px;
+            height: 400px;
+            background-color: aquamarine;
+            /* border: 10px solid orangered */
+            /* border-color:orange ; */
+            /* border-style: solid; */
+
+            border-top-width: 20px;
+            border-top-color: blueviolet;
+            border-right-width: 10px;
+            border-right-color: orange;
+            border-bottom-width: 5px; ;
+            border-bottom-color: aqua;
+            border-left-width: 10px;
+            border-left-color: blue;
+            /* 边框圆角 */
+            /* border-radius: 20%; */
+            border-top-left-radius: 30%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 10%;
+            border-bottom-right-radius: 100%;
+            /* 边框风格 */
+            border-top-style: dashed;
+            border-right-style: dotted;
+            border-bottom-style: groove;
+            border-left-style: double;
+            
+
+            /* 复合属性写法 ,圆角不能直接指定 */
+            border-top: dashed blueviolet 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>hello</div>
+</body>
+</html>
