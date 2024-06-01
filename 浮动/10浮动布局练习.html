@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>浮动布局练习</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        /*#region默认样式设置*/
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .leftfix {
+            float: left;
+        }
+
+        .rightfix {
+            float: right;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /*#endregion*/
+
+        /*#region顶部栏设置 */
+        .topbar {
+            
+            height: 80px;
+            width: 960px;
+            text-align: center;
+
+        }
+
+        .logo,
+        .banner1,
+        .banner2 {
+            background-color: rgb(221, 221, 221);
+        }
+
+        .logo {
+            width: 200px;
+            margin-right: 10px;
+            height: 80px;
+            line-height: 80px;
+            float: left;
+        }
+
+        .banner1 {
+            width: 540px;
+            height: 80px;
+            line-height: 80px;
+            float: left;
+        }
+
+        .banner2 {
+            width: 200px;
+            margin-left: 10px;
+            height: 80px;
+            line-height: 80px;
+            float: right;
+        }
+
+        /*#endregion顶部设置结束 */
+        /*#region 菜单栏设置 */
+        .menu {
+            background-color: rgb(221, 221, 221);
+            margin-top: 10px;
+            margin-bottom: 10px;
+            height: 30px;
+            width: 960px;
+            line-height: 30px;
+            text-align: center;
+
+        }
+        /*#endregion */
+        /*#region内容栏总设置 */
+        .content{
+            margin: 0 auto;
+            width: 960px;
+            /* height: 430px; */
+            /* margin-bottom: 10px; */
+        }
+        /* #endregion */
+        /*#region左侧内容栏目设置 */
+        .lf_co {
+            width: 370px;
+            /* height: 430px; */
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .top_co {
+            width: 368px;
+            height: 198px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        .lft_co,
+        .rth_co {
+            width: 178px;
+            height: 198px;
+            border: 1px solid black;
+        }
+        /*#endregion */
+        /*#region右侧内容栏目设置 */
+        .rh_co {
+            width: 200px;
+            /* height: 430px; */
+            
+        }
+
+        div.rh_co div {
+            width: 198px;
+            height: 128px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+        /*#endregion */
+        /*#region页脚设置 */
+        footer{
+            width: 960px;
+            height: 60px;
+            background-color: rgb(221,221,221);
+            line-height: 60px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        /*#endregion */
+    </style>
+</head>
+
+<body>
+    <div class="content clearfix">
+        <!-- 顶部栏 -->
+        <div class="topbar clearfix">
+            <div class="logo">logo</div>
+            <div class="banner1">banner1</div>
+            <div class="banner2">banner2</div>
+        </div>
+        <!-- 菜单 -->
+        <div class="menu leftfix clearfix">菜单</div>
+        <!-- 左侧内容栏目 -->
+        <div class="clearfix lf_co leftfix" >
+            <div class="top_co">栏目1</div>
+            <div class="lft_co leftfix">栏目3</div>
+            <div class="rth_co rightfix">栏目4</div>
+        </div>
+
+        <div class="lf_co leftfix clearfix">
+            <div class="top_co">栏目2</div>
+            <div class="lft_co leftfix">栏目5</div>
+            <div class="rth_co rightfix">栏目6</div>
+        </div>
+
+        <!-- 右侧内容栏目 -->
+        <div class="rh_co leftfix">
+            <div>栏目7</div>
+            <div>栏目8</div>
+            <div>栏目9</div>
+        </div>
+    </div>
+
+</body>
+<footer>页脚</footer>
+</html>

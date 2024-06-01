@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动产生的影响</title>
+    <style>
+        .outer{
+            width: 500px;
+            background-color: gray;
+            border: 1px solid black;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .box1,.box2,.box3{
+            float: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <!-- <div class="box box0">0</div> -->
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+    </div>
+    <hr>
+    <p>浮动产生的影响</p>
+    <p>对兄弟元素的影响：后面的兄弟元素，会占据浮动元素之前的位置，在浮动元素的下面；对前面的兄弟无影响</p>
+    <p>对父元素的影响:不能撑起父元素的高度，导致父元素高度塌陷；但父元素的宽度依然束缚浮动的元素</p>
+
+</body>
+</html>

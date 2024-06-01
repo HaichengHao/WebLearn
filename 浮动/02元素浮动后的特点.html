@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素浮动后的特点</title>
+    <style>
+        .outer{
+            width: 800px;
+            height: 400px;
+            background-color: orangered;
+            color: white;
+            font-size: 0px;
+            padding: 10px;
+        }
+        .box{
+            font-size: 20px;
+            padding: 10px;
+        }
+        .box1{
+            background-color: aquamarine;
+            float: right;
+        }
+        .box2{
+            background-color: blueviolet;
+            width: 100px;
+            float: left;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            border: 10px solid olivedrab;
+            border-radius: 10%;
+            line-height: 100px;
+            text-align: center;
+
+        }
+        .box3{
+            background-color: goldenrod;
+            /* height: 100px; */
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+    <hr>
+    <p>元素浮动之后是脱离文档流的</p>
+    <p>不管浮动前是什么元素，一旦开启浮动，那么其宽高都是由内容撑开的，但是也是可以通过css设置样式的</p>
+    <p>元素开启浮动后就可以和其他元素共用一行</p>
+    <p>浮动后没有margin塌陷和margin合并的问题</p>
+    <p>浮动后的元素不会被当做行内或行内块元素一样去处理，没有行内块的空白问题</p>
+</body>
+</html>

@@ -1,4 +1,5 @@
 shift + alt +f 快速格式化，对齐
+shift+alt+↓ 复制当前行粘贴到下一行
 ctrl + y 删除指定行
 shift + tab 整体向左
 ！ 直接生成html模板

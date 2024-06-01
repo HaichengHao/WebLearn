@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布局小技巧3</title>
+    <style>
+        .outer{
+            width: 400px;
+            height: 400px;
+            line-height: 400px;
+            font-size: 20px;
+            background-color: gray;
+            text-align: center;
+
+        }
+        .inner{
+            background-color: orange;
+        }
+        img{
+            width: 70px;
+            height: 70px;
+            vertical-align: middle;
+        }
+        .txt{
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <span class="inner">出来玩啊</span><img src="../mypage.ico" alt="">
+    </div><hr>
+    <p>行内元素、行内块元素 可以被父元素当做文本处理</p>
+    <p>即：可以像处理文本对齐一样，去处理行内、行内块在父元素中的对齐</p>
+    <p>例如 ： text-align line-height text-indent等</p><hr>
+    <p>如何让子元素、在父元素中<span class="txt">水平居中?</span></p>
+    <p>若子元素为<span class="txt">块元素</span>、给父元素加上 margin:0 auto</p>
+    <p>若子元素为<span class="txt">行内元素、行内块元素</span>给父元素加上text-align:center</p>
+    <hr>
+    <p>如何让子元素，在父元素中<span class="txt">垂直居中</span></p>
+    <p>若子元素为<span class="txt">块元素</span>，给子元素加上 margin-top,值为<span class="txt">&#40;父元素content-子元素height&#41;&#247;2</span></p>
+    <p>若子元素为<span class="txt">行内元素、行内块元素:</span></p>
+    <p>让父元素的height=line-height,每个子元素都加上vertical-align:middle</p>
+    <p>补充:若想绝对垂直居中，父元素的font-size设置为0</p>
+    <hr>
+    <p>一个展示，<a href="../others/fin.html">点我查看</a></p>
+</body>
+</html>

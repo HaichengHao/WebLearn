@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行内块的幽灵空白问题</title>
+    <style>
+        div{
+            width: 400px;
+            background-color: aqua;
+        }
+        #im1{
+            vertical-align: bottom;
+        }
+        #tst{
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../mypage.ico" id="im1">xg
+    </div>
+    <hr>
+    <img src="../others/yl.png" id="tst">
+    <p>这条缝隙就是幽灵空白，它是因为x-height的基线对齐出现的
+        <br>解决方式1，设置行内块元素的vertial-align为bottom<br>
+        <br>解决方式2，有局限，当没有文字出现时，可以将行内块的显示模式改为块的显示模式，<br>那么根据块元素的显示规则，它是没有基线对齐的限制的
+        <br>解决方式3，父元素设置font-size为0，子元素出现文字则单独指定文字的font-size
+    </p>
+</body>
+</html>

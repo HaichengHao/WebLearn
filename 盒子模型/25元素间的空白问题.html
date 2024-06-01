@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素间的空白问题</title>
+    <style>
+        div {
+            height: 500px;
+            background-color: orangered;
+            /* 解决方式 */
+            /*1 父元素的font-size设置为0 */
+            font-size: 0;
+
+        }
+        span{
+            /*2 子元素的字体指定好 */
+            font-size: 20px;
+        }
+        .s1 {
+            background-color: aquamarine;
+        }
+
+        .s2 {
+            background-color: green;
+        }
+
+        .s3 {
+            background-color: salmon;
+        }
+        img{
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>主要讨论的就是行内元素和行内块元素的空白问题，因为块元素本身独占一行</p>
+    <div>
+        <span class="s1">人之初</span>
+        <span class="s2">性本善</span>
+        <span class="s3">性相近</span>
+        <hr>
+        <img src="../mypage.ico" alt="">
+        <img src="../mypage.ico" alt="">
+        <img src="../mypage.ico" alt="">
+    </div>
+</body>
+
+</html>

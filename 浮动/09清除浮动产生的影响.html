@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动产生的影响</title>
+    <link rel="icon" href="../mypage.ico">
+    <style>
+        .outer{
+            width: 500px;
+            background-color: gray;
+            border: 1px solid black;
+            /* 解决方案1 */
+            /* height: 122px; */
+            /* 解决方案2 */
+            /* float: left; */
+            /* 解决方案3 */
+            /* overflow: hidden; */
+            
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .box1,.box2,.box3,.box4{
+            float: left;
+        }
+        /* 解决方案4 写一个空的div 清除浮动影响 */
+        /* .mofa{
+            clear: both;
+        } */
+        /* 解决方案5 ,其实就是有点优雅的第四种 */
+        /* 用clear:both 解决浮动产生的影响时，要保证前面的元素都是浮动的 */
+        .outer::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <!-- <div class="box box0">0</div> -->
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        
+        <!-- <div class="mofa"></div> -->
+    </div>
+    <div style="background-color: orange; height: 400px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam possimus consectetur corporis perspiciatis repellendus perferendis voluptate magnam voluptates eum nam quae ab itaque nemo voluptatem, deserunt dignissimos minus cumque autem?</div>
+    <p>解决方案总结:</p>
+    <p>方案1:给父元素指定高度</p>
+    <p>方案2:给父元素也设置浮动，带来其他影响</p>
+    <p>方案3:给父元素设置overflow:hidden</p>
+    <p>方案4:在所有浮动元素的后面，添加一个块元素，并给该块级元素设置clear:both</p>
+    <p><span style="color: red; font-weight: 400;">方案5(最优):</span><br>给浮动元素的父亲，设置伪元素，通过伪元素清除浮动，原理同方案4相同</p>
+    <pre style="background-color: black; color: aquamarine; font-size: 30px;">
+.parent::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+    </pre>
+    <p>在布局中的一个原则:设置元素浮动时，兄弟元素要么都浮动，要么都不浮动</p>
+</body>
+</html>
