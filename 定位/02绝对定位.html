@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位</title>
+    <style>
+        :root {
+            font-size: 30px;
+        }
+
+        .outer {
+            width: 500px;
+            background-color: skyblue;
+            border: 1px solid black;
+            padding: 20px;
+            position: relative;
+        }
+
+        .outer:hover .box2 {
+            position: absolute;
+            /* 鼠标悬浮在outer上时，box2相对包含块儿向左移动220px */
+            left: 220px;
+            transition: 1s all linear;
+            /* -webkit-filter: opacity(55%);
+            filter: opacity(55%); */
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+
+        }
+
+        .box1 {
+            background-color: #888;
+        }
+
+        .box2 {
+            background-color: orange;
+            position: absolute;
+            top: 220px;
+            left: 20px;
+            /* float: left; */
+        }
+
+        .box3 {
+            background-color: green;
+            /* position: relative; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+    <hr>
+    <p>给元素设置position:absolute 即可实现绝对定位 <br>
+    可以使用left,right,top,bottom四个属性调整位置</p>
+    <p>开启绝对定位之后，会脱离文档流，但是，补上位置的元素的文字并不会被甩出来<br>
+        开启绝对定位的元素参考的是它的包含块<br>何为<span style="color: red;">包含块?</span><br>
+        1.没有脱离文档流的元素，它的父元素就是它的包含块<br>
+        2.脱离文档流的元素，第一个开启定位(至于是什么定位不重要，往往是相对定位)的祖先元素，就是它的包含块
+        <br>
+        如果左右定位同时写，则左生效，上下同时写，上生效
+        <br>
+        其依然可以和margin一起使用,但是定位写的什么margin就只能指定该指定的
+        <br>
+        例如定位的指定了left 则只能指定,margin-left
+        <br>
+        绝对定位的元素不能和浮动共存
+        <br>
+        只要进行了绝对定位，那么这个元素不管是不是块、行内块、或者行内元素，统一就成了一种新的元素-定位元素
+        <br>
+        定位元素的宽高默认是由内容撑开的，其宽高也是可以设置的
+
+    </p>
+</body>
+
+</html>

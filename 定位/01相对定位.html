@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相对定位</title>
+    <style>
+        .outer{
+            width: 500px;
+            background-color: skyblue;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            
+        }
+        .box1{
+            background-color: #888;
+            position: relative;
+            
+        }
+        .box2{
+            background-color: orange;
+            position: relative; /*相对定位，相对的是自己原来的位置*/
+            /* left: 100px; */
+            /* right: 100px; */
+            top: 50px;
+        }
+        .box3{
+            background-color: green;
+            position: relative;
+            /* left: 200px; */
+            /* top: 50px; */
+            bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+    <hr>
+    <p>相对定位，相对的是自己原来的位置<br>
+    开启相对定位的元素没有脱离文档流<br>
+    left 和 right 同时指定，则不论就近原则，right会失效 top和bottom不能一起写，否则bottom元素会失效<br>
+    开启定位的元素层级比较高，如果都开启，则最近的那个层级高<br>
+    开启定位后依然可以调整盒子模型和设置浮动
+<br>相对定位的应用场景:对元素进行微调</p>
+    <img src="../others/posi3.png" alt="">
+    <img src="../others/pos_re.png" alt="">
+    <img src="../others/pos_re2.png" alt="">
+</body>
+</html>
