@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定定位</title>
+    <style>
+        :root {
+            font-size: 30px;
+        }
+
+        .outer {
+            width: 500px;
+            background-color: skyblue;
+            border: 1px solid black;
+            padding: 20px;
+
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            overflow: auto;
+        }
+
+        .box1 {
+            background-color: #888;
+        }
+
+        .box2 {
+            background-color: orange;
+            position: fixed;
+            top: 0px;
+            /* left: 0px; */
+            right: 0;
+        }
+
+        .box3 {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+    <hr>
+    <p>开启了固定定位的元素无论是什么显示模式的元素，统统成为定位元素，可以设置宽高<br>
+    设置了固定定位的元素和绝对定位一样不能和浮动共存</p>
+    <p>固定定位与绝对定位相似，但元素的包含块为 viewport 视口。<br>
+        该定位方式常用于创建在滚动屏幕时仍固定在相同位置的元素。
+        元素会被移出正常文档流，并不为元素预留空间，<br>
+        而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。<br>
+        元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。<br>
+        fixed 属性会创建新的层叠上下文。<br>
+        当元素祖先的 transform、perspective、filter 或 backdrop-filter 属性非 none 时，容器由视口改为该祖先。</p>
+    <p>可以指定margin，但还是和固定定位一样，指定什么样的定位才能指定什么样的margin<br>
+        如</p>
+    <pre style="background-color: black; color: white;">
+position:fixed;
+top:10px;
+/*那么这时就只能指定margin-top*/
+margin-top: xx px;
+</pre>
+    <p>应用场景，水印蒙版，牛皮癣广告</p>
+</body>
+
+
+</html>

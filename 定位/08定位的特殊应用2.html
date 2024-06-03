@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位的特殊应用2</title>
+    <style>
+        .outer{
+            width:800px;
+            height: 400px;
+            background-color: #888;
+            position: relative;
+        }
+        .inner{
+            width: 400px;
+            height: 100px;
+            background-color: skyblue;
+            position: absolute;
+            /* 方案1(推荐) */
+            /* top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto; */
+
+            /* 方案2(不推荐) */
+            left:50%;
+            top:50%;
+            margin-left: -200px;
+            margin-top: -50px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">hello</div>
+    </div>
+    <hr>
+    <p>发生固定定位，绝对定位后，元素变成了定位元素，默认宽高被内容撑开，且依然可以设置宽高</p>
+    <p>发生相对定位后，元素依然是之前的显示模式</p>
+    <hr>
+    <p>一下特殊应用值针对绝对定位和固定定位，不包括相对定位的元素</p>
+    <p>特殊应用</p>
+    <p>a让定位元素的宽充满包含块</p>
+    <p>1.块宽想与包含块一致，可以给定位元素同时设置left和right为0</p>
+    <p>2.高度想与包含块一致，top和bottom设置为0</p>
+    <p>b让定位元素包含在块中</p>
+    <p>方案一<br>
+    <pre style="background-color: black; color: aliceblue; font-size: 40px;">
+left:0;
+right:0;
+top:0;
+bottom:0;
+margin:auto;
+    </pre></p>
+    <p>方案二<br>
+    <pre style="background-color: black; color: aliceblue; font-size: 40px;">
+left:50%;
+top:50%;
+margin-left: -宽度的一半;
+margin-top: -高度的一般;
+    </pre>
+
+    </p>
+    <p style="color: red; font-size: 40px; font-style: italic;">注意，这两种方案的前提是该定位元素必须设置宽高！！！</p>
+</body>
+</html>

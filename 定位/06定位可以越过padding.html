@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位可以越过padding</title>
+    <style>
+        .outer{
+            width: 800px;
+            height: 600px;
+            background-color: #888;
+            padding: 20px;
+            position: relative;
+        }
+        .inner{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            position: absolute; /*绝对定位，如果其父元素未设置定位，
+            那么其就会向外层的祖先元素找，如果祖先元素设置有定位，那么就是其包含块，否则将会是整个html*/
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>
