@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布局常用类名</title>
+    <style>
+        table{
+            border: 1px solid black;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            text-align: center;
+            table-layout: auto;
+            background-color: aquamarine;
+            color: purple;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+
+        }
+        td{
+            border: 0.1px solid black;
+        }
+        tr:nth-child(2n){
+            background-color: bisque;
+        }
+        caption{
+            background-color: blueviolet;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>布局常用类名</caption>
+        <tbody>
+            <tr>
+                <td colspan="2">位置</td>
+            </tr>
+            <tr>
+                <td>顶部导航条</td>
+                <td>topbar</td>
+            </tr>
+            <tr>
+                <td>页头</td>
+                <td>header、page-header</td>
+            </tr>
+            <tr>
+                <td>导航</td>
+                <td>nav、navigator、navbar</td>
+            </tr>
+            <tr>
+                <td>搜索框</td>
+                <td>search、search-box</td>
+            </tr>
+            <tr>
+                <td>横幅、广告、宣传图</td>
+                <td>banner</td>
+            </tr>
+            <tr>
+                <td>主要内容</td>
+                <td>content、main</td>
+            </tr>
+            <tr>
+                <td>侧边栏</td>
+                <td>aside、sidebar</td>
+            </tr>
+            <tr>
+                <td>页脚</td>
+                <td>footer、page-foot</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

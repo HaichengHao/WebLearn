@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除默认样式</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <style>
+        :root{
+            font-size: 30px;
+            background-color: bisque;
+        }
+        pre{
+            background-color: blueviolet;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: red;
+        }
+        a:hover{
+            background-color: blueviolet;
+            color: white;
+            border: 2px dashed white;
+        }
+    </style>
+</head>
+<body>
+    <p>p元素有默认的上下margin</p>
+    <p>h1-h6标题也有上下margin,并且字体加粗</p>
+    <p>body元素有默认的8px外边距</p>
+    <p>超链接有默认的文字颜色和下划线</p>
+    <p>ul元素有默认的padding</p>
+    <p>……</p>
+    <hr>
+    <p>重置默认样式</p>
+    <p>方案1使用全局选择器</p>
+    <pre>
+*{
+    margin:0;
+    padding:0;
+    ……
+}
+    </pre><hr>
+    <p>方案2 reset.css</p>
+    <p>选择到具有默认样式的元素，清空其默认样式</p>
+    <p>经过reset后的网页，好似一张白纸，开发人员可以根据设计稿，精细的去添加具体的样式</p>
+    <hr>
+    <p>方案3 normalize.css</p>
+    <p>normailize.css是一种最新的方案，它在清除默认样式的基础上，保留了一些有价值的默认样式</p>
+    <p>官网地址<a href="http://necolas.github.io/normalize.css/">点我跳转</a></p>
+    <p>相对于reset.css , normalize.css有如下特点</p>
+    <p>1.保护了有价值的默认样式，而不是全部清除</p>
+    <p></p>
+</body>
+</html>
