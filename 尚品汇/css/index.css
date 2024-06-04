@@ -1,0 +1,188 @@
+/* #region 版心 */
+.container{
+    width: 1190px;
+    height: 30px ;
+    margin: 0 auto;
+    /* background-color: orange; */
+}
+/* #endregion  版心结束*/
+/* #region 导航条 */
+.topbar{
+    height: 30px;
+    background-color: #ececec;
+}
+/* #endregion 导航条结束 */
+
+/* #region 欢迎区 */
+.welcome{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 0;
+    color: #666;
+}
+.welcome span,.welcome a{
+    font-size: 12px;
+}
+.welcome .hello{
+    margin-right: 28px;
+}
+.welcome .login{
+    padding-right: 10px; 
+    border-right: 1px solid #666;
+}
+.welcome .register{
+   padding-left: 10px;
+}
+/* #endregion 欢迎区结束 */
+
+/* #region 右侧导航区 */
+.topbar-nav .list li{
+    float: left;
+    line-height: 30px;
+}
+.topbar-nav .list li a{
+    border-right: 1px solid #666;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.topbar-nav .list li:first-child a{
+    
+    padding-left: 0px;
+}
+.topbar-nav .list li:last-child a{
+    border-right: 0px;
+    padding-right: 0px;
+}
+/* #endregion 右侧导航区结束 */
+
+/* #region头部 */
+.header{
+    height: 120px;
+    /* background-color: skyblue; */
+    font-size: 0px;
+}
+.header .search form{
+    margin-top: 42px;
+}
+.header .search input{
+    width: 508px;
+    height: 34px;
+    border: 1px solid #DD302D;
+}
+.header .search button {
+    width: 80px;
+    height: 36px;
+    background-color:#DD302D ;
+    background-image: url(../../images/serch_icon.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    vertical-align: top;
+}
+
+/* #endregion头部结束 */
+
+/* #region主导航区 */
+.main_nav{
+    height: 48px;
+    border-bottom: 1px solid #DD302D ;
+}
+.main_nav .all-types{
+    width: 190px;
+    background-color: #DD302D;
+    font-size: 16px ;
+    color: white;
+    line-height: 48px;
+    text-align: center;
+}
+.main_nav .main_nav_list li{
+    float: left;
+    line-height: 48px;
+    font-size: 16px;
+    color: black;
+    margin: 0 10px;
+}
+/* #endregion 主导航区结束 */
+
+/* #region 主要内容区 */
+.main_content{
+    margin-top: 10px;
+}
+.slide-nav{
+    width: 190px;
+    height: 458px;
+    background-color: #f4f4f4;
+    /* 对ul进行开启相对定位 */
+    position: relative;
+    
+}
+.slide-nav li{
+    font-size: 14px;
+    padding-left: 10px;
+    line-height: 28px;
+    
+}
+.slide-nav li:first-child a{
+   color: #DD302D;
+}
+.slide-nav li:hover{
+    background-color: #DD302D;
+}
+.slide-nav li:hover>a{
+    color: white;
+}
+.slide-nav li:hover .second-menu{
+    display: block;
+}
+.main_content .second-menu{
+    width: 680px;
+    height: 458px;
+    background-color: #ececec;
+    /* 二级菜单使用绝对定位，包含块为已开启相对定位的ul */
+    position: absolute;
+    top: 0;
+    left: 190px;
+    display: none;
+}
+.banner{
+    width: 690px;
+    height: 458px;
+    background-color: orchid;
+    margin: 0 10px;
+    background-image: url(../images/banner主图.png);
+    background-position: top 0px left 0px;
+}
+.slide-other{
+    width: 290px;
+    height: 458px;
+    background-color: aquamarine;
+}
+
+.second-menu{
+    padding-left: 20px;
+}
+.second-menu dt{
+    margin: right 10px; ;
+}
+.second-menu dl{
+    height: 36px;
+    line-height: 36px;
+    
+}
+.second-menu>dl{
+    margin-top: 10px;
+}
+.second-menu dt,.second-menu dd{
+    float: left;
+
+}
+.second-menu dt a{
+    width: 70px;
+    padding-right: 20px;
+    font-weight: bold;
+}
+.second-menu dd a{
+    padding: 0 10px;
+    border-left: 1px solid #666;
+}
+/* #endregion 主要内容区结束 */
