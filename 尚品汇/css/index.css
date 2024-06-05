@@ -1,80 +1,95 @@
 /* #region 版心 */
-.container{
+.container {
     width: 1190px;
-    height: 30px ;
+    height: 30px;
     margin: 0 auto;
     /* background-color: orange; */
 }
+
 /* #endregion  版心结束*/
 /* #region 导航条 */
-.topbar{
+.topbar {
     height: 30px;
     background-color: #ececec;
 }
+
 /* #endregion 导航条结束 */
 
 /* #region 欢迎区 */
-.welcome{
+.welcome {
     height: 30px;
     line-height: 30px;
     text-align: center;
     font-size: 0;
     color: #666;
 }
-.welcome span,.welcome a{
+
+.welcome span,
+.welcome a {
     font-size: 12px;
 }
-.welcome .hello{
+
+.welcome .hello {
     margin-right: 28px;
 }
-.welcome .login{
-    padding-right: 10px; 
+
+.welcome .login {
+    padding-right: 10px;
     border-right: 1px solid #666;
 }
-.welcome .register{
-   padding-left: 10px;
+
+.welcome .register {
+    padding-left: 10px;
 }
+
 /* #endregion 欢迎区结束 */
 
 /* #region 右侧导航区 */
-.topbar-nav .list li{
+.topbar-nav .list li {
     float: left;
     line-height: 30px;
 }
-.topbar-nav .list li a{
+
+.topbar-nav .list li a {
     border-right: 1px solid #666;
     padding-left: 15px;
     padding-right: 15px;
 }
-.topbar-nav .list li:first-child a{
-    
+
+.topbar-nav .list li:first-child a {
+
     padding-left: 0px;
 }
-.topbar-nav .list li:last-child a{
+
+.topbar-nav .list li:last-child a {
     border-right: 0px;
     padding-right: 0px;
 }
+
 /* #endregion 右侧导航区结束 */
 
 /* #region头部 */
-.header{
+.header {
     height: 120px;
     /* background-color: skyblue; */
     font-size: 0px;
 }
-.header .search form{
+
+.header .search form {
     margin-top: 42px;
 }
-.header .search input{
+
+.header .search input {
     width: 508px;
     height: 34px;
     border: 1px solid #DD302D;
 }
+
 .header .search button {
     width: 80px;
     height: 36px;
-    background-color:#DD302D ;
-    background-image: url(../../images/serch_icon.png);
+    background-color: #DD302D;
+    background-image: url(../images/serch_icon.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     vertical-align: top;
@@ -83,58 +98,71 @@
 /* #endregion头部结束 */
 
 /* #region主导航区 */
-.main_nav{
+.main_nav {
     height: 48px;
-    border-bottom: 1px solid #DD302D ;
+    border-bottom: 1px solid #DD302D;
 }
-.main_nav .all-types{
+
+.main_nav .all-types {
     width: 190px;
     background-color: #DD302D;
-    font-size: 16px ;
+    font-size: 16px;
     color: white;
     line-height: 48px;
     text-align: center;
 }
-.main_nav .main_nav_list li{
+
+.main_nav .main_nav_list li {
     float: left;
     line-height: 48px;
     font-size: 16px;
     color: black;
     margin: 0 10px;
 }
+
 /* #endregion 主导航区结束 */
 
 /* #region 主要内容区 */
-.main_content{
+
+.main_content {
     margin-top: 10px;
+    /* background-color: orangered; */
+    height: 458px;
 }
-.slide-nav{
+
+.slide-nav {
     width: 190px;
     height: 458px;
     background-color: #f4f4f4;
     /* 对ul进行开启相对定位 */
     position: relative;
-    
+
 }
-.slide-nav li{
+
+.slide-nav li {
     font-size: 14px;
     padding-left: 10px;
     line-height: 28px;
-    
+
 }
-.slide-nav li:first-child a{
-   color: #DD302D;
+
+.slide-nav li:first-child a {
+    color: #DD302D;
 }
-.slide-nav li:hover{
+
+.slide-nav li:hover {
     background-color: #DD302D;
 }
-.slide-nav li:hover>a{
+
+.slide-nav li:hover>a {
     color: white;
 }
-.slide-nav li:hover .second-menu{
+
+.slide-nav li:hover .second-menu {
     display: block;
 }
-.main_content .second-menu{
+
+.main_content .second-menu {
     width: 680px;
     height: 458px;
     background-color: #ececec;
@@ -144,7 +172,8 @@
     left: 190px;
     display: none;
 }
-.banner{
+
+.banner {
     width: 690px;
     height: 458px;
     background-color: orchid;
@@ -152,37 +181,327 @@
     background-image: url(../images/banner主图.png);
     background-position: top 0px left 0px;
 }
-.slide-other{
+
+.slide-other {
     width: 290px;
     height: 458px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 
-.second-menu{
+.second-menu {
     padding-left: 20px;
 }
-.second-menu dt{
-    margin: right 10px; ;
+
+.second-menu dt {
+    margin: right 10px;
+    ;
 }
-.second-menu dl{
+
+.second-menu dl {
     height: 36px;
     line-height: 36px;
-    
+
 }
-.second-menu>dl{
+
+.second-menu>dl {
     margin-top: 10px;
 }
-.second-menu dt,.second-menu dd{
+
+.second-menu dt,
+.second-menu dd {
     float: left;
 
 }
-.second-menu dt a{
+
+.second-menu dt a {
     width: 70px;
     padding-right: 20px;
     font-weight: bold;
 }
-.second-menu dd a{
+
+.second-menu dd a {
     padding: 0 10px;
     border-left: 1px solid #666;
 }
+
+.slide-other .message {
+    width: 260px;
+    height: 156px;
+    border: 1px solid #d9d9d9;
+    /* background-color: tomato; */
+    padding: 0 14px;
+}
+
+.message .title {
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #d9d9d9;
+
+}
+
+.slide-other .other-nav {
+    width: 290px;
+    height: 290px;
+    /* background-color: green; */
+    margin-top: 10px;
+}
+
+.title span {
+    font-size: 14px;
+}
+
+.title a {
+    font-size: 12px;
+}
+
+ul.msg-list li {
+    height: 26px;
+    line-height: 26px;
+}
+
+.other-nav {
+    overflow: hidden;
+}
+
+.other-nav-lst:first-child {
+    margin-top: 16px;
+}
+
+.other-nav-lst:nth-child(2) {
+    margin: 17px 0;
+}
+
+.other-nav-lst li {
+    width: 48px;
+    height: 70px;
+    /* background-color: #DD302D; */
+    float: left;
+    margin: 0 11px;
+}
+
+.other-nav-lst li:first-child {
+    margin-left: 16px;
+}
+
+div.other-nav .picture{
+    background-image: url('../images/精灵图-侧边功能.png');
+    width: 48px;
+    height: 48px;
+}
+
+.other-nav-lst:nth-child(1) li:nth-child(2) .picture{
+    background-position: -48px 0;
+}
+.other-nav-lst:nth-child(1) li:nth-child(3) .picture{
+    background-position: -96px 0;
+}
+.other-nav-lst:nth-child(1) li:nth-child(4) .picture{
+    background-position: -144px 0;
+}
+/* 第二行精灵图 */
+.other-nav-lst:nth-child(2) li:first-child .picture{
+    background-position: 0px -48px;
+}
+.other-nav-lst:nth-child(2) li:nth-child(2) .picture{
+    background-position: -48px -48px;
+}
+.other-nav-lst:nth-child(2) li:nth-child(3) .picture{
+    background-position: -96px -48px;
+}
+.other-nav-lst:nth-child(2) li:nth-child(4) .picture{
+    background-position: -144px -48px;
+}
+/* 第三行精灵图 */
+.other-nav-lst:nth-child(3) li:first-child .picture{
+    background-position: 0px -96px;
+}
+.other-nav-lst:nth-child(3) li:nth-child(2) .picture{
+    background-position: -48px -96px;
+}
+.other-nav-lst:nth-child(3) li:nth-child(3) .picture{
+    background-position: -96px -96px;
+}
+.other-nav-lst:nth-child(3) li:nth-child(4) .picture{
+    background-position: -144px -96px;
+}
+ul.other-nav-lst li {
+    text-align: center;
+    cursor:pointer;
+}
+
+/* div.other-nav */
 /* #endregion 主要内容区结束 */
+
+/* #region 秒杀开始 */
+.seckill{
+    margin-top: 10px;
+    height: 190px;
+    /* background-color: skyblue; */
+}
+div.seckill img{
+    float: left;
+    margin-right: 11px;
+    cursor: pointer;
+    /* margin-top: 10px; */
+}
+div.seckill img:last-child{
+    margin-right: 0;
+}
+
+/* #endregion 秒杀结束 */
+
+/* #region 楼层开始 */
+.floor{
+    margin-top: 48px;
+    /* background-color: tomato; */
+    height: 480px;
+}
+
+.floor-nav{
+    height: 30px;
+    line-height: 30px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #DD302D;
+}
+.floor-name{
+    font-size: 20px;
+    font-weight: bold;
+}
+.floor-nav-lst li{
+    float: left;
+    font-size: 14px;
+}
+.floor-nav-lst li a{
+    padding:0  10px;
+    border-right: 1px solid #666;
+}
+.floor-nav-lst li:first-child a{
+    padding-left: 0px;
+    color: #DD302D;
+}
+.floor-nav-lst li:last-child a{
+    padding-right:0 ;
+    border: 0;
+}
+/* 楼层下部分 */
+.floor-info{
+    margin-top: 10px;
+    /* width: 480px; */
+}
+.info-item{
+    float: left;
+    height: 432px;
+}
+.item1{
+    width: 190px;
+    height: 392px;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+.item2{
+    width: 340px;
+    height: 432px;
+    /* background-color: blueviolet; */
+}
+.item3{
+    width: 206px;
+    height: 432px;
+    /* background-color: yellow; */
+    border-right: 1px solid #d9d9d9;
+}
+.item4{
+    width: 206px;
+    height: 432px;
+    /* background-color: green; */
+    border-right: 1px solid #d9d9d9;
+}
+.item5{
+    width: 205px;
+    height: 432px;
+    /* background-color: orange; */
+}
+.item1-list{
+    margin-bottom: 30px;
+}
+.item1-list li{
+    font-size: 16px;
+    text-align: center;
+    width: 90px;
+    height: 22px;
+    padding-bottom:3.5px ;
+    border-bottom: 1px solid #d9d9d9;
+    float: left;
+   
+}
+.item1-list li:nth-child(odd){ /*选择奇数位置,可以写为2n-1*/
+    float: left;
+}
+.item1-list li:nth-child(even){ /*选择偶数位置，也可以写为2n*/
+    float: right;
+}
+.item1-list li:nth-child(3),.item1-list li:nth-child(4){
+    margin: 14.4px 0px;
+    
+}
+.item3 img,.item4 img,.item5 img {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+/* #endregion 楼层结束 */
+
+/* #region页脚 */
+.footer{
+    margin-top: 48px;
+    height: 440px;
+    background-color: #483e3e;
+    
+}
+.links-list{
+    margin-top: 20px;
+    float: left;
+    width: 190px;
+    height: 176px;
+    margin-right: 10px;
+}
+.links-list:last-child{
+    margin-right: 0;
+}
+.links-list li a{
+    color: white;
+    font-size: 14px;
+}
+.line{
+    height: 1px;
+    background-color: #584d4d;
+    margin-top: 22px;
+}
+.bottom-links{
+    text-align: center;
+    margin-top: 47px;
+}
+.bottom-links-list{
+    display: inline-block;
+     /*ul本身是块显示模式，但是将其显示模式修改为行内块后，结合
+    上面的让div中的text-align:center就可以将div中的行内元素或者
+    行内块元素水平居中*/
+}
+/* .bottom-links-list{
+    margin: 0 auto;
+} */
+.bottom-links li{
+    float: left;
+    
+}
+.bottom-links-list a{
+    font-size: 14px;
+    color: white;
+    padding:0 26px;
+    border-right: 1px solid white;
+}
+.bottom-links-list li:last-child a{
+    border:0px
+}
+.copyright{
+    margin-top: 10px;
+    color: white;
+}
