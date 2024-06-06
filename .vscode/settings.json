@@ -1,5 +1,4 @@
 {
-    "accessibility.signals.sounds.volume": 0,
     "accessibility.signals.chatRequestSent": {
         "sound": "off"
     },
@@ -32,5 +31,8 @@
     },
     "accessibility.signals.positionHasWarning": {
         "sound": "off"
+    },
+    "accessibility.signalOptions": {
+        "volume": 0
     },
 }

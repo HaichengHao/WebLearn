@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增表单控件属性</title>
+    <link rel="icon" href="../../mypage.ico">
+    <style>
+        table {
+            border: 2px solid orangered;
+            border-collapse: collapse;
+            table-layout: auto;
+            text-align: center;
+        }
+
+        td {
+            border: 0.1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        账号:<input
+        type="text" 
+        name="account" 
+        placeholder="请输入您的账号" 
+        required 
+        autofocus 
+        autocomplete="on"
+        pattern="\w{6}"><!--数字字母下划线，而且最多六位-->
+        <br>
+        密码:<input type="password" name="pwd" placeholder="请输入您的密码" required>
+        <br>
+        性别:<input type="radio" name="gender" value="male">男
+        <input type="radio" name="gender" value="female">女
+        <br>
+        爱好:
+        <input type="checkbox" name="hobby" value="smoke">抽烟
+        <input type="checkbox" name="hobby" value="drink">喝酒
+        <input type="checkbox" name="hobby" value="perm">烫头
+        <br>
+        籍贯
+        <select name="area" id="">
+            <option value="京">北京</option>
+            <option value="豫">河南</option>
+            <option value="冀">河北</option>
+            <option value="鲁" selected>山东</option>
+        </select>
+        <br>
+        其它
+        <textarea name="others" id="" style="vertical-align: top;" maxlength="20" placeholder="请输入"></textarea>
+        <br>
+        <button>提交</button>
+    </form>
+    <br>
+    <p>表单控件新增属性</p>
+    <table>
+        <thead>
+            <td>属性名</td>
+            <td>简介</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>placeholder</td>
+                <td>提供无实义的词项</td>
+            </tr>
+            <tr>
+                <td>required</td>
+                <td>必选项</td>
+            </tr>
+            <tr>
+                <td>autofocus</td>
+                <td>自动对焦</td>
+            </tr>
+            <tr>
+                <td>autocomplete</td>
+                <td>自动完成</td>
+            </tr>
+            <tr>
+                <td>pattern</td>
+                <td>正则表达式</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>设置了Required之后的表单控件如果不填写的话会提示，且表单不提交，required不能用在按钮上</p>
+    <img src="../../others/reqd.png" alt="">
+    <hr>
+    <p>autocomplete:有两个值，on 和 off 代表开启和关闭,只要曾提交过表单，下次再输入会有显示，自动完成只能用在正常的input上，不可用于密码，按钮，文本域，单选复选</p>
+    <img src="../../others/autocompl.png" alt="">
+    <hr>
+    <p>pattern表示是正则表达式，需要写pattern='正则表达式' 才可以,如果输入框与正则表达式不一致则会提示，它限制不了多行输入，且其起作用的前提应当是该控件不为空才能对其判断，往往与Required配合使用</p>
+    <img src="../../others/repat.png" alt="">
+    
+</body>
+
+</html>

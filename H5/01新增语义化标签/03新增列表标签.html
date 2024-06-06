@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增列表标签</title>
+    <style>
+        table{
+            border: 3px solid orangered;
+            border-collapse: collapse;
+            table-layout: auto;
+            text-align: center;
+        }
+        td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <input type="text" list="mydata">
+        <button>搜索</button>
+    </form>
+    <datalist id="mydata">
+        <option value="周杰伦">周杰伦</option>
+        <option value="周冬雨">周冬雨</option>
+        <option value="马冬梅">马冬梅</option>
+        <option value="温兆伦">温兆伦</option>
+    </datalist>
+    <hr>
+    <details>
+        <summary>如何一夜暴富</summary>
+        <p>好好学习</p>
+    </details>
+    <hr>
+    <p>新增列表标签</p>
+    <table>
+        <thead>
+            <td>标签名</td>
+            <td>语义</td>
+            <td>单/双标签</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>datalist</td>
+                <td>用于搜索框的关键字提示</td>
+                <td>双</td>
+            </tr>
+            <tr>
+                <td>details</td>
+                <td>用于展示问题和答案，或对专有名词进行解释</td>
+                <td>双</td>
+            </tr>
+            <tr>
+                <td>summary</td>
+                <td>写在details里面，用于解释问题或专有名词</td>
+                <td>双</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

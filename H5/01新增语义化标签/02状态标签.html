@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>状态标签</title>
+    <link rel="icon" href="../../mypage.ico">
+    <style>
+        meter{
+           width: 400px;
+        }
+        progress{
+            width: 400px;
+        }
+        table{
+            border: 3px solid aquamarine;
+            border-collapse: collapse;
+            table-layout: auto;
+            text-align: center;
+        }
+        thead{
+            font-size: 18px;
+            background-color: orangered;
+            color: white;
+        }
+        tr:nth-child(even){
+            background-color: blueviolet;
+            color: white;
+        }
+        tr:nth-child(odd){
+            background-color: tomato;
+            
+        }
+        td{
+            border: 0.1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- 电量-->
+    <span>手机电量:</span>
+    <meter max="100" min="0" value="10" low="10" high="80" optimum="90"></meter>
+    <!-- 最小为0，最大为100，当前值为10，规定低值为10，规定高值为80，最优值为90 -->
+    <br>
+    <!-- 进度标签 -->
+    <span>当前进度:</span>
+    <progress max="100" value="80"></progress>
+    <hr>
+    <p></p>
+    <ul>
+        meter标签
+        <li>语义：定哟已知范围内的标量测量，也被称为gauge(标尺)，双标签，例如电量、磁盘用量等</li>
+        <li>常用属性如下：
+            <table>
+                <thead>
+                    <td>属性</td>
+                    <td>值</td>
+                    <td>描述</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>heigh</td>
+                        <td>数值</td>
+                        <td>规定高值</td>
+                    </tr>
+                    <tr>
+                        <td>low</td>
+                        <td>数值</td>
+                        <td>规定低值</td>
+                    </tr>
+                    <tr>
+                        <td>max</td>
+                        <td>数值</td>
+                        <td>规定最大值</td>
+                    </tr>
+                    <tr>
+                        <td>min</td>
+                        <td>数值</td>
+                        <td>规定最小值</td>
+                    </tr>
+                    <tr>
+                        <td>optimum</td>
+                        <td>数值</td>
+                        <td>规定当前最优值</td>
+                    </tr>
+                    <tr>
+                        <td>value</td>
+                        <td>数值</td>
+                        <td>规定当前值</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+    <hr>
+    <ul>progress标签
+        <li>语义：显示某个任务完成的进度的指示器，一般用于表示进度条，双标签，例如：工作完成进度等</li>
+        <li>常用属性如下：
+            <table>
+                <thead>
+                    <td>属性</td>
+                    <td>值</td>
+                    <td>描述</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>max</td>
+                        <td>数值</td>
+                        <td>规定目标值</td>
+                    </tr>
+                    <tr>
+                        <td>value</td>
+                        <td>数值</td>
+                        <td>规定当前值</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+</body>
+</html>
