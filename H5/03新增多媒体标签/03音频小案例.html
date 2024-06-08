@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音频小案例</title>
+    <style>
+        audio{
+            width: 600px;
+        }
+        .mask{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.488);
+        }
+        .dialog{
+            font-size: 30px;
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin:auto;
+            background-color: blueviolet;
+            line-height: 400px;
+            text-align: center;
+        }
+        span{
+            border: 1px solid white;
+            color: white;
+            background-color: rgba(127, 255, 212, 0.379);
+            cursor:url(/others/arrow.png),pointer;
+        }
+        table{
+            table-layout: auto;
+            text-align: center;
+            border: 2px solid orangered;
+            border-collapse: collapse;
+            background-color: blueviolet;
+            color: white;
+        }
+        td:nth-child(odd){
+            background-color: brown;
+        }
+        td{
+            border: 0.1px solid black;
+        }
+        td li{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <audio  id="music" src="/others/乃木坂46-あらかじめ语られるロマンス(事先预知的浪漫)(1).mp3" muted controls ></audio>
+    <div class="mask" id="mask">
+        <div class="dialog">
+            <span>点我登录</span>
+            <span onclick="go()">随便听听</span>
+        </div>
+    </div>
+    <script>
+        function go(){
+            music.play()
+            mask.style.display = 'none'
+        }
+    </script>
+    <p>audio音频标签很多属性与视频标签类似,但是其不能设置封面poster属性</p>
+    <hr>
+    <table>
+        <thead>
+            <td>属性</td>
+            <td>值</td>
+            <td>描述</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>src</td>
+                <td>url地址</td>
+                <td>音频地址</td>
+            </tr>
+            <tr>
+                <td>controls</td>
+                <td>无</td>
+                <td>向用户展示音频控件(比如播放\暂停 按钮)</td>
+            </tr>
+            <tr>
+                <td>autoplay</td>
+                <td>无</td>
+                <td>音频自动播放</td>
+            </tr>
+            <tr>
+                <td>muted</td>
+                <td>无</td>
+                <td>音频静音</td>
+            </tr>
+            <tr>
+                <td>loop</td>
+                <td>无</td>
+                <td>循环播放</td>
+            </tr>
+            <tr>
+                <td>preload</td>
+                <td>auto/metadata/none</td>
+                <td>
+                    <ul>音频预加载，如果使用autoplay,则忽略该属性
+                        <li>none 不预加载音频</li>
+                        <li>metadata 仅预先获取音频的元数据(例如长度)</li>
+                        <li>auto 可以下载整个音频文件，即使用户不希望使用它</li>
+
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

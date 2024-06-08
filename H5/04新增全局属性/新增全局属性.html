@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增全局属性</title>
+    <style>
+        .box1{
+            width: 600;
+            height: 200px;
+            background-color: skyblue;
+            border: 1px solid black;
+            font-size: 20px;
+        }
+        table{
+            background-color: orangered;
+            color: white;
+            border: 1px solid blueviolet;
+            table-layout: auto;
+            border-collapse: collapse;
+        }
+        thead td{
+            font-size: 20px;
+            background-color: gray;
+        }
+        td{
+            border: 1px solid purple;
+        }
+        td::selection{
+            background-color: aqua;
+            color: black;
+        }
+        tr:nth-child(2n-1){
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1" contenteditable="true" ondragend="go(event)"spellcheck="true" contextmenu="鸟">Lorem ipsum dolor sit amet.</div>
+    <div class="box1" draggable="true" data-a="1" b="2" c="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, expedita.</div>
+    <script>
+        function go(e){
+            alert(e.x) 
+            alert(e.y)
+        }
+    </script>
+    <hr>
+    <caption>新增全局属性(了解)</caption>
+    <table>
+        <thead>
+            <td>属性名</td>
+            <td>功能</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>contenteditable</td>
+                <td>表述元素是否可以被用户编辑<br>
+                true:可以被编辑<br>
+                false:不可以被编辑</td>
+            </tr>
+            <tr>
+                <td>draggable</td>
+                <td>表示元素可以被拖动，可选值如下:<br>
+                true:可以被拖动<br>
+                false:不可以被拖动</td>
+            </tr>
+            <tr>
+                <td>hidden</td>
+                <td>隐藏元素</td>
+            </tr>
+            <tr>
+                <td>spellcheck(需要在浏览器的设置内开启拼写检查功能，否则无效)</td>
+                <td>规定是否对元素进行拼写和语法检查，可选值如下:<br>
+                true:检查<br>
+                false:不检查</td>
+            </tr>
+            <tr>
+                <td>contextmenu（配合js）</td>
+                <td>规定元素的上下文菜单，在用户鼠标右键点击元素时显示</td>
+            </tr>
+            <tr>
+                <td>data-*(配合js)</td>
+                <td>用于存储页面的私有定制数据</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

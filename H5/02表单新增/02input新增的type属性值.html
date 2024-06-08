@@ -5,16 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>input新增的type属性值</title>
     <link rel="icon" href="/mypage.ico">
+    <style>
+        p{
+            background-color: rebeccapurple;
+            color: white;
+            display: inline-block;
+            width: 900px;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
-    <form action="">
+    <form action="" novalidate> <!--如果表单设置了novalidate，那么所有的控件都不再进行校验就可以直接提交-->
         邮箱:<input type="email" name="email">
         <br>
         url:<input type="url" name="url">
+        <br>
+        数值:<input type="number" step="2" max="100" min="0">
+        <br>
+        搜索:<input type="search" name="search" id="">
+        <br>
+        电话:<input type="tel">
+        <br>
+        范围选择器:<input type="range" name="range" min="20" max="100" value="22">
+        <br>
+        颜色选择器:<input type="color" name="color"> 
+        <br>
+        日期选择器:<input type="date" name="data">
+        <br>
+        月份选择器:<input type="month" name="month">
+        <br>
+        周选择器:<input type="week" name="week">
+        <br>
+        时间选择器:<input type="time" name="time">
+        <br>
+        日期+时间:<input type="datetime-local">
         <button>提交</button>
+        <br>
+        
+        <!-- step 控制步长 max标注之后输入框的长度会变短，但是不指定它会按最大长度 -->
     </form>
 <hr>
-
+<p>novalidate写在表单form里后，表单的所有控件都不再进行校验就可以直接提交</p>
 <a href="http://www.wetools.com/url-encode" title="可以将url转换成认识的样子">转码网站</a>
 <br>
 <img src="/others/wetools.png" alt="" style="width: 400px; height: 460px;">
@@ -23,5 +55,7 @@
 <img src="/others/emailtst2.png" alt="">
 <p>对于input的type值为url,则需要输入合法的网址，否则会提示</p>
 <img src="/others/urltst.png" alt="">
+<p>type值为num的输入框，如果指定了步长，则会按步长来限定输入的数字，如max=100,min=0,step=2,则会按0,2,4,6,8这样的规律来，如果自己输入的不符合规律会提示</p>
+<img src="/others/num.png" alt="">
 </body>
 </html>

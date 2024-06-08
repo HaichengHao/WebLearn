@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增视频标签</title>
+    <style>
+        p{
+            background-color: blueviolet;
+            color: white;
+            display: inline-block;
+            width: 500px;
+        }
+    </style>
+</head>
+<body> 
+    <video src="/others/小电影.mp4" width="600" height="400" controls muted loop poster="/others/img9.jpg" preload="metadata"></video>
+    <!-- 加了controls可以让视频可以点击播放，加了muted那么视频默认就是静音的 
+     autoplay那么视频就自动播放，但是前提是视频已经开启了默认静音-->
+
+     <hr>
+     <p>加了controls可以让视频可以点击播放，加了muted那么视频默认就是静音的 
+        autoplay那么视频就自动播放，但是前提是视频已经开启了默认静音</p>
+    <p>但是！！！如果出现了即使没设置muted也自动播放的情况，其实是浏览器识别了媒体参与度<br>
+    即浏览器识别你每次都要访问这个网站且每次打开该网站的第一件行为就是去点击播放视频，那么浏览器以后就会自动帮你播放，即使你没有为这个视频设置muted</p>
+    <p>添加属性loop可以实现循环播放</p>
+    <p>设置视频封面指定poster='封面地址' 想看到效果要先关闭自动播放</p>
+    <p>设置预加载preload="参数" ，三个参数 auto(自动) none(不进行预加载) meta(加载基本信息) </p>
+    <br>
+    <a href="chrome://media-engagement/">点击查看媒体参与度</a>
+</body>
+</html>
